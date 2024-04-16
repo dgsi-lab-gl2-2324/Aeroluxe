@@ -1,6 +1,9 @@
 <body>
   
-
+<?php
+            $clientes = $datos['client'];
+           //hacer cosas con $clientes
+  ?>
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="hero d-flex align-items-center">
 
