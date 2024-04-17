@@ -19,7 +19,7 @@
           </div>
         </div>
         <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-          <img src="<?php echo URL ?>/assets/img/hero-img.png" class="img-fluid" alt="">
+          <img src="<?php echo URL ?>assets/img/piscinascomplejo.png" class="img-fluid" alt="">
         </div>
       </div>
     </div>
@@ -27,6 +27,53 @@
   </section><!-- End Hero -->
 
   <main id="main">
+
+
+
+  <!-- ======= Joinus Section ======= -->
+  <section id="inicio-sesion-section" class="inicio-sesion-section">
+
+<div class="container" data-aos="fade-up">
+
+  <header class="section-header">
+    <h2>Únete</h2>
+    <p>Obtén tu pase al paraíso</p>
+  </header>
+
+  <div class="row">
+
+    <div class="col-lg-4">
+      <div class="post-box">
+        <div class="post-img"><img src="<?php echo URL ?>assets/img/piscinaup.png" class="img-fluid" alt=""></div>
+        <h3 class="post-title">Crea tu cuenta</h3>
+        <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Ver más</span><i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="post-box">
+        <div class="post-img"><img src="assets/img/piscinaup.png" class="img-fluid" alt=""></div>
+        <h3 class="post-title">Inicia sesión</h3>
+        <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Ver más</span><i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="post-box">
+        <div class="post-img"><img src="assets/img/piscinaup.png" class="img-fluid" alt=""></div>
+        <h3 class="post-title">Compra tu pase</h3>
+        <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Ver más</span><i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</section><!-- End Recent Blog Posts Section -->
+
+
+
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
 
@@ -35,7 +82,7 @@
 
           <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
             <div class="content">
-              <h3>Who We Are</h3>
+            <h3>¿Quiénes somos?</h3>
               <h2>Expedita voluptas omnis cupiditate totam eveniet nobis sint iste. Dolores est repellat corrupti reprehenderit.</h2>
               <p>
                 Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit voluptatum nam et est corrupti.
@@ -111,7 +158,7 @@
               <i class="bi bi-emoji-smile"></i>
               <div>
                 <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Happy Clients</p>
+                <p>Clientes satisfechos</p>
               </div>
             </div>
           </div>
@@ -121,7 +168,7 @@
               <i class="bi bi-journal-richtext" style="color: #ee6c20;"></i>
               <div>
                 <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Projects</p>
+                <p>Proyectos</p>
               </div>
             </div>
           </div>
@@ -131,7 +178,7 @@
               <i class="bi bi-headset" style="color: #15be56;"></i>
               <div>
                 <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Hours Of Support</p>
+                <p>Horas de soporte</p>
               </div>
             </div>
           </div>
@@ -141,7 +188,7 @@
               <i class="bi bi-people" style="color: #bb0852;"></i>
               <div>
                 <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Hard Workers</p>
+                <p>Nuestros trabajadores</p>
               </div>
             </div>
           </div>
@@ -449,14 +496,16 @@
           <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
             <div class="box">
               <h3 style="color: #07d5c0;">Pase único</h3>
-              <div class="price">2500 <sup>€</sup></div>
+              <div class="price">2.500 <sup>€</sup></div>
               <img src="<?php echo URL ?>/assets/img/pricing-free.png" class="img-fluid" alt="">
               <ul>
-                <li>Disfruta de la piscina principal</li>
-                <li>Transporte incluido</li>
-                <li>Nulla at volutpat dola</li>
-                <li class="na">Zona de restauración</li>
-                <li class="na">Massa ultricies mi</li>
+                <li>Piscina principal</li>
+                <li>Aseo premium</li>
+                <li>Transporte aéreo</li>
+                <li class="na">Piscinas segundarias</li>
+                <li class="na">Bufé libre</li>
+                <li class="na">Barra libre</li>
+                <li class="na">Suites</li>
               </ul>
               <a href="#" class="btn-buy">Comprar</a>
             </div>
@@ -464,16 +513,18 @@
 
           <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
             <div class="box">
-              <span class="featured">Featured</span>
-              <h3 style="color: #65c600;">Starter Plan</h3>
-              <div class="price"><sup>$</sup>19<span> / mo</span></div>
+              <span class="featured">Oportunidad</span>
+              <h3 style="color: #65c600;">Plan mensual</h3>
+              <div class="price">5.000 <sup>€</sup><span> / mes</span></div>
               <img src="<?php echo URL ?>/assets/img/pricing-starter.png" class="img-fluid" alt="">
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
+              <<ul>
+                <li>Piscina principal</li>
+                <li>Aseo premium</li>
+                <li>Transporte aéreo</li>
+                <li class=>Piscinas segundarias</li>
+                <li class="na">Bufé libre</li>
+                <li class="na">Barra libre</li>
+                <li class="na">Suites</li>
               </ul>
               <a href="#" class="btn-buy">Comprar</a>
             </div>
@@ -481,15 +532,17 @@
 
           <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
             <div class="box">
-              <h3 style="color: #ff901c;">Business Plan</h3>
-              <div class="price"><sup>$</sup>29<span> / mo</span></div>
+              <h3 style="color: #ff901c;">Plan anual</h3>
+              <div class="price">30.000 <sup>€</sup><span> / año</span></div>
               <img src="<?php echo URL ?>/assets/img/pricing-business.png" class="img-fluid" alt="">
               <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
+                <li>Piscina principal</li>
+                <li>Aseo premium</li>
+                <li>Transporte aéreo</li>
+                <li class=>Piscinas segundarias</li>
+                <li class=>Bufé libre</li>
+                <li class=>Barra libre</li>
+                <li class="na">Suites</li>
               </ul>
               <a href="#" class="btn-buy">Comprar</a>
             </div>
@@ -497,15 +550,18 @@
 
           <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
             <div class="box">
-              <h3 style="color: #ff0071;">Ultimate Plan</h3>
-              <div class="price"><sup>$</sup>49<span> / mo</span></div>
+              <h3 style="color: #ff0071;">Plan premium</h3>
+              <div class="price">50.000 <sup>€</sup><span> / año</span></div>
               <img src="<?php echo URL ?>/assets/img/pricing-ultimate.png" class="img-fluid" alt="">
               <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
+                <li>Piscina principal</li>
+                <li>Aseo premium</li>
+                <li>Transporte aéreo</li>
+                <li class=>Piscinas segundarias</li>
+                <li class=>Bufé libre</li>
+                <li class=>Barra libre</li>
+                <li class=>Suites</li>
+
               </ul>
               <a href="#" class="btn-buy">Comprar</a>
             </div>
