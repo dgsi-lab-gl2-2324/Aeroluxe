@@ -87,6 +87,38 @@ class ClientesModel extends EntidadBase
         return $usu;
     }
 
+    public function dameClientePorDni($dni)
+    {
+        $usu = null;
+
+        $sql = "SELECT * FROM $this->table WHERE dni = :dni;";
+        $statement = $this->db->prepare($sql);
+
+        $statement->bindParam(':dni', $dni, PDO::PARAM_STR);
+        $statement->execute();
+
+        if ($statement->rowCount() == 1) {
+
+            $row = $statement->fetch();
+
+            $usu = new Clientes(
+                $row['id'],
+                $row['nombre'],
+                $row['apellido1'],
+                $row['apellido2'],
+                $row['dni'],
+                $row['email'],
+                $row['telefono'],
+                $row['clave'],
+                $row['fecha_alta']
+
+            );
+
+        }
+
+        return $usu;
+    }
+
   
     public function insertarUsuario($nombre, $ape1, $ape2, $dni, $email, $tlf, $clave)
     {
