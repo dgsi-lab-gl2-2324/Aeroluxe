@@ -1,0 +1,16 @@
+RewriteEngine On
+
+#URL AMIGABLE
+
+#cabecera
+RewriteRule ^inicio/?$ index.php [L]
+    ##logo
+    RewriteRule ^logo/?$ assets/img/logo.png [L]
+
+#Registro usuario
+RewriteRule ^registro/?$ index.php?controller=Sesion&action=registro [L]
+    ##registrar
+    RewriteRule ^registrarse/?$ index.php?controller=Sesion&action=registrarse [L]
+
+
+
