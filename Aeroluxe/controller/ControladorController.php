@@ -28,7 +28,7 @@ class ControladorController extends ControladorBase
     {
         $data = array();
 
-
+        $data['datosCli'] = "";
 
         $this->view("index", $data);
     }
