@@ -19,7 +19,7 @@
           </div>
         </div>
         <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-          <img src="<?php echo URL ?>assets/img/piscinascomplejo.png" class="img-fluid" alt="">
+          <img src="<?php echo URL ?>/assets/img/piscinascomplejo.png" class="img-fluid" alt="">
         </div>
       </div>
     </div>
@@ -33,46 +33,44 @@
   <!-- ======= Joinus Section ======= -->
   <section id="inicio-sesion-section" class="inicio-sesion-section">
 
-<div class="container" data-aos="fade-up">
+    <div class="container" data-aos="fade-up">
 
-  <header class="section-header">
-    <h2>Únete</h2>
-    <p>Obtén tu pase al paraíso</p>
-  </header>
+      <header class="section-header">
+        <h2>Únete</h2>
+        <p>Obtén tu pase al paraíso</p>
+      </header>
 
-  <div class="row">
+      <div class="row">
 
-    <div class="col-lg-4">
-      <div class="post-box">
-        <div class="post-img"><img src="<?php echo URL ?>assets/img/piscinaup.png" class="img-fluid" alt=""></div>
-        <h3 class="post-title">Crea tu cuenta</h3>
-        <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Ver más</span><i class="bi bi-arrow-right"></i></a>
+        <div class="col-lg-4">
+          <div class="post-box">
+            <div class="post-img"><img src="<?php echo URL ?>/assets/img/piscinaup.png" class="img-fluid" alt=""></div>
+            <h3 class="post-title">Crea tu cuenta</h3>
+            <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Ver más</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="post-box">
+            <div class="post-img"><img src="<?php echo URL ?>/assets/img/piscinaup.png" class="img-fluid" alt=""></div>
+            <h3 class="post-title">Inicia sesión</h3>
+            <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Ver más</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="post-box">
+            <div class="post-img"><img src="<?php echo URL ?>/assets/img/piscinaup.png" class="img-fluid" alt=""></div>
+            <h3 class="post-title">Compra tu pase</h3>
+            <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Ver más</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
       </div>
+
     </div>
 
-    <div class="col-lg-4">
-      <div class="post-box">
-        <div class="post-img"><img src="assets/img/piscinaup.png" class="img-fluid" alt=""></div>
-        <h3 class="post-title">Inicia sesión</h3>
-        <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Ver más</span><i class="bi bi-arrow-right"></i></a>
-      </div>
-    </div>
-
-    <div class="col-lg-4">
-      <div class="post-box">
-        <div class="post-img"><img src="assets/img/piscinaup.png" class="img-fluid" alt=""></div>
-        <h3 class="post-title">Compra tu pase</h3>
-        <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Ver más</span><i class="bi bi-arrow-right"></i></a>
-      </div>
-    </div>
-
-  </div>
-
-</div>
-
-</section><!-- End Recent Blog Posts Section -->
-
-
+  </section><!-- End Join Us Section -->
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
@@ -83,9 +81,17 @@
           <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
             <div class="content">
             <h3>¿Quiénes somos?</h3>
-              <h2>Expedita voluptas omnis cupiditate totam eveniet nobis sint iste. Dolores est repellat corrupti reprehenderit.</h2>
+              <h2>
+                En Aeroluxe, superamos los límites de la innovación y la sostenibilidad, ofreciendo a nuestros clientes experiencias únicas de ocio y relajación en instalaciones flotantes de alta tecnología. 
+              </h2>
               <p>
-                Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit voluptatum nam et est corrupti.
+                Fundada por visionarios, destaca por su diseño exclusivo que incluye piscinas, zonas de restauración y áreas de descanso, todas suspendidas en el aire.
+              </p>
+              <p>
+                Nos centramos en maximizar la seguridad, la comodidad y la sostenibilidad de nuestras instalaciones, garantizando una experiencia inigualable. Cada detalle de Aeroluxe está diseñado pensando en el disfrute y la seguridad de nuestros visitantes asegurando un entorno perfecto para la relajación.
+              </p>
+              <p>
+                Nuestro equipo de líderes, ingenieros y diseñadores está comprometido con la constante innovación y mejora de nuestras operaciones.
               </p>
               <div class="text-center text-lg-start">
                 <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
@@ -167,7 +173,7 @@
             <div class="count-box">
               <i class="bi bi-journal-richtext" style="color: #ee6c20;"></i>
               <div>
-                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+                <span data-purecounter-start="0" data-purecounter-end="21" data-purecounter-duration="1" class="purecounter"></span>
                 <p>Proyectos</p>
               </div>
             </div>
@@ -187,7 +193,7 @@
             <div class="count-box">
               <i class="bi bi-people" style="color: #bb0852;"></i>
               <div>
-                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+                <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
                 <p>Nuestros trabajadores</p>
               </div>
             </div>
@@ -267,18 +273,17 @@
         <!-- Feature Tabs -->
         <div class="row feture-tabs" data-aos="fade-up">
           <div class="col-lg-6">
-            <h3>Neque officiis dolore maiores et exercitationem quae est seda lidera pat claero</h3>
-
+            <h3>Nuestros compromisos</h3>
             <!-- Tabs -->
             <ul class="nav nav-pills mb-3">
               <li>
-                <a class="nav-link active" data-bs-toggle="pill" href="#tab1">Saepe fuga</a>
+                <a class="nav-link active" data-bs-toggle="pill" href="#tab1">Innovación</a>
               </li>
               <li>
-                <a class="nav-link" data-bs-toggle="pill" href="#tab2">Voluptates</a>
+                <a class="nav-link" data-bs-toggle="pill" href="#tab2">Experiencia del Cliente</a>
               </li>
               <li>
-                <a class="nav-link" data-bs-toggle="pill" href="#tab3">Corrupti</a>
+                <a class="nav-link" data-bs-toggle="pill" href="#tab3">Sostenibilidad</a>
               </li>
             </ul><!-- End Tabs -->
 
@@ -286,45 +291,50 @@
             <div class="tab-content">
 
               <div class="tab-pane fade show active" id="tab1">
-                <p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
+                <p>
+                  Nos dedicamos a la búsqueda continua de avances tecnológicos que impulsan nuestros resorts flotantes. 
+                </p>
                 <div class="d-flex align-items-center mb-2">
                   <i class="bi bi-check2"></i>
-                  <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
+                  <h4>Tecnologías</h4>
                 </div>
-                <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non eveniet magni quaerat nemo et.</p>
+                <p>
+                  Desde la tecnología de levitación magnética que soporta nuestras instalaciones, hasta sistemas automatizados para la gestión del complejo, la innovación está en el corazón de todo lo que hacemos. 
+                </p>
                 <div class="d-flex align-items-center mb-2">
                   <i class="bi bi-check2"></i>
-                  <h4>Incidunt non veritatis illum ea ut nisi</h4>
+                  <h4>Objetivos</h4>
                 </div>
-                <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora. Quia et perferendis.</p>
+                <p>
+                  Aspiramos a crear servicios que no solo impresionen visualmente, sino que también ofrezcan nuevas formas de disfrutar del ocio y la relajación.
+                </p>
               </div><!-- End Tab 1 Content -->
 
               <div class="tab-pane fade show" id="tab2">
-                <p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
+                <p>
+                  Cada visita a Aeroluxe es una aventura donde el lujo se encuentra con la fantasía. 
+                </p>
                 <div class="d-flex align-items-center mb-2">
                   <i class="bi bi-check2"></i>
-                  <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
+                  <h4>Detalles</h4>
                 </div>
-                <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non eveniet magni quaerat nemo et.</p>
+                <p>
+                  Nuestra atención al detalle y el deseo de superar las expectativas se reflejan en la calidad inigualable del servicio, las impresionantes instalaciones flotantes y las exclusivas experiencias de entretenimiento. 
+                </p>
                 <div class="d-flex align-items-center mb-2">
                   <i class="bi bi-check2"></i>
-                  <h4>Incidunt non veritatis illum ea ut nisi</h4>
+                  <h4>Compromiso</h4>
                 </div>
-                <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora. Quia et perferendis.</p>
+                <p>
+                  Estamos comprometidos a proporcionar un servicio excepcional que asegure que cada momento en Aeroluxe sea inolvidable.
+                </p>
               </div><!-- End Tab 2 Content -->
 
               <div class="tab-pane fade show" id="tab3">
-                <p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
-                <div class="d-flex align-items-center mb-2">
-                  <i class="bi bi-check2"></i>
-                  <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
-                </div>
-                <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non eveniet magni quaerat nemo et.</p>
-                <div class="d-flex align-items-center mb-2">
-                  <i class="bi bi-check2"></i>
-                  <h4>Incidunt non veritatis illum ea ut nisi</h4>
-                </div>
-                <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora. Quia et perferendis.</p>
+                <p>
+                  La sostenibilidad no es una idea posterior en Aeroluxe; es una de nuestras principales motivaciones. Nuestro enfoque va más allá de minimizar el impacto ambiental; trabajamos para crear un entorno que se nutra de su entorno natural y social. Implementamos prácticas sostenibles en la construcción y el mantenimiento diario de nuestras instalaciones, asegurando que las futuras generaciones también puedan disfrutar de la belleza y la innovación que Aeroluxe tiene para ofrecer.
+                </p>
+
               </div><!-- End Tab 3 Content -->
 
             </div>
@@ -332,7 +342,7 @@
           </div>
 
           <div class="col-lg-6">
-            <img src="<?php echo URL ?>/assets/img/features-2.png" class="img-fluid" alt="">
+            <img src="<?php echo URL ?>/assets/img/complejo8up.png" class="img-fluid" alt="">
           </div>
 
         </div><!-- End Feature Tabs -->
@@ -415,7 +425,7 @@
       <div class="container" data-aos="fade-up">
 
         <header class="section-header">
-          <h2>Services</h2>
+          <h2>Servicios</h2>
           <p>Veritatis et dolores facere numquam et praesentium</p>
         </header>
 
@@ -424,8 +434,8 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-box blue">
               <i class="ri-discuss-line icon"></i>
-              <h3>Nesciunt Mete</h3>
-              <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+              <h3>Experiencias de Ocio Flotantes</h3>
+              <p>Aeroluxe redefine el lujo con sus exclusivas instalaciones flotantes. Disfruta de nuestra piscina suspendida, zonas de restauración flotantes y áreas de baño, todas equipadas con tecnología de levitación magnética para una sensación única de estar entre las nubes.</p>
               <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
@@ -433,8 +443,8 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="service-box orange">
               <i class="ri-discuss-line icon"></i>
-              <h3>Eosle Commodi</h3>
-              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
+              <h3>Transporte Aéreo Privado</h3>
+              <p>Accede a nuestras instalaciones a través de un elegante servicio de transporte aéreo. Con nuestra flota de vehículos de transporte exclusivos, garantizamos una llegada y salida fluidas y memorables, asegurando privacidad y confort desde el momento en que decides visitarnos.</p>
               <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
@@ -442,8 +452,8 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
             <div class="service-box green">
               <i class="ri-discuss-line icon"></i>
-              <h3>Ledo Markt</h3>
-              <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
+              <h3>Sistemas de Información Automatizados</h3>
+              <p>Desde la reserva hasta el servicio posvisita, nuestros sistemas automatizados de gestión garantizan una experiencia sin esfuerzo y personalizada. Con nuestro avanzado sistema de reservas y atención al cliente, cada detalle de tu visita se atiende con precisión y cuidado.</p>
               <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
@@ -451,8 +461,8 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
             <div class="service-box red">
               <i class="ri-discuss-line icon"></i>
-              <h3>Asperiores Commodi</h3>
-              <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
+              <h3>Seguridad Avanzada y Mantenimiento</h3>
+              <p>Tu seguridad y comodidad son nuestra prioridad. Con nuestro avanzado sistema de seguridad y un equipo de mantenimiento de respuesta rápida, aseguramos un entorno seguro y bien conservado en todo momento, permitiéndote disfrutar de tu estancia sin preocupaciones.</p>
               <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
@@ -460,8 +470,8 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
             <div class="service-box purple">
               <i class="ri-discuss-line icon"></i>
-              <h3>Velit Doloremque.</h3>
-              <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
+              <h3>Desarrollo e Innovación Continuos (I+D)</h3>
+              <p>Nuestro compromiso con la innovación se refleja en la constante evolución de nuestras ofertas. Con inversiones significativas en I+D, exploramos y desarrollamos las últimas tecnologías para mejorar continuamente tu experiencia en Aeroluxe.</p>
               <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
@@ -469,8 +479,8 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
             <div class="service-box pink">
               <i class="ri-discuss-line icon"></i>
-              <h3>Dolori Architecto</h3>
-              <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
+              <h3>Fidelización y Servicios Personalizados</h3>
+              <p>Ofrecemos programas de fidelización diseñados para premiar a nuestros visitantes recurrentes con servicios personalizados, mejoras en la estancia y ofertas exclusivas, asegurando que cada visita sea tan refrescante como la primera.</p>
               <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
@@ -497,7 +507,7 @@
             <div class="box">
               <h3 style="color: #07d5c0;">Pase único</h3>
               <div class="price">2.500 <sup>€</sup></div>
-              <img src="<?php echo URL ?>/assets/img/pricing-free.png" class="img-fluid" alt="">
+              <img src="<?php echo URL ?>/assets/img/planbasicoup.png" class="img-fluid" alt="">
               <ul>
                 <li>Piscina principal</li>
                 <li>Aseo premium</li>
@@ -516,8 +526,8 @@
               <span class="featured">Oportunidad</span>
               <h3 style="color: #65c600;">Plan mensual</h3>
               <div class="price">5.000 <sup>€</sup><span> / mes</span></div>
-              <img src="<?php echo URL ?>/assets/img/pricing-starter.png" class="img-fluid" alt="">
-              <<ul>
+              <img src="<?php echo URL ?>/assets/img/planmensualup.png" class="img-fluid" alt="">
+              <ul>
                 <li>Piscina principal</li>
                 <li>Aseo premium</li>
                 <li>Transporte aéreo</li>
@@ -534,7 +544,7 @@
             <div class="box">
               <h3 style="color: #ff901c;">Plan anual</h3>
               <div class="price">30.000 <sup>€</sup><span> / año</span></div>
-              <img src="<?php echo URL ?>/assets/img/pricing-business.png" class="img-fluid" alt="">
+              <img src="<?php echo URL ?>/assets/img/plananualup.png" class="img-fluid" alt="">
               <ul>
                 <li>Piscina principal</li>
                 <li>Aseo premium</li>
@@ -552,7 +562,7 @@
             <div class="box">
               <h3 style="color: #ff0071;">Plan premium</h3>
               <div class="price">50.000 <sup>€</sup><span> / año</span></div>
-              <img src="<?php echo URL ?>/assets/img/pricing-ultimate.png" class="img-fluid" alt="">
+              <img src="<?php echo URL ?>/assets/img/planpremiumup.png" class="img-fluid" alt="">
               <ul>
                 <li>Piscina principal</li>
                 <li>Aseo premium</li>
@@ -688,144 +698,126 @@
       <div class="container" data-aos="fade-up">
 
         <header class="section-header">
-          <h2>Portfolio</h2>
-          <p>Check our latest work</p>
+          <h2>Galería</h2>
+          <p>Explora nuestras instalaciones</p>
         </header>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
+              <li data-filter="*" class="filter-active">Todo</li>
+              <li data-filter=".filter-piscina">Piscinas</li>
+              <li data-filter=".filter-restaurante">Restaurantes</li>
+              <li data-filter=".filter-aseo">Aseos</li>
             </ul>
           </div>
         </div>
 
         <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-piscina">
             <div class="portfolio-wrap">
-              <img src="<?php echo URL ?>/assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <img src="<?php echo URL ?>/assets/img/piscinaup.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>App</p>
+                <h4>Piscina</h4>
                 <div class="portfolio-links">
-                  <a href="<?php echo URL ?>/assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
-                  <a href="<?php echo URL ?>/portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                  <a href="<?php echo URL ?>/assets/img/piscinaup.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Piscina"><i class="bi bi-plus"></i></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-restaurante">
             <div class="portfolio-wrap">
-              <img src="<?php echo URL ?>/assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+              <img src="<?php echo URL ?>/assets/img/restauranteup.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
+                <h4>Restaurante</h4>
                 <div class="portfolio-links">
-                  <a href="<?php echo URL ?>/assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                  <a href="<?php echo URL ?>/portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                  <a href="<?php echo URL ?>/assets/img/restauranteup.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-aseo">
             <div class="portfolio-wrap">
-              <img src="<?php echo URL ?>/assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+              <img src="<?php echo URL ?>/assets/img/bañoup.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>App</p>
+                <h4>Aseo</h4>
                 <div class="portfolio-links">
-                  <a href="<?php echo URL ?>/assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
-                  <a href="<?php echo URL ?>/portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                  <a href="<?php echo URL ?>/assets/img/bañoup.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-piscina">
             <div class="portfolio-wrap">
-              <img src="<?php echo URL ?>/assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+              <img src="<?php echo URL ?>/assets/img/piscinainviernoup.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Card 2</h4>
-                <p>Card</p>
+                <h4>Piscina</h4>
                 <div class="portfolio-links">
-                  <a href="<?php echo URL ?>/assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 2"><i class="bi bi-plus"></i></a>
-                  <a href="<?php echo URL ?>/portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                  <a href="<?php echo URL ?>/assets/img/piscinainviernoup.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Piscina"><i class="bi bi-plus"></i></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-restaurante">
             <div class="portfolio-wrap">
-              <img src="<?php echo URL ?>/assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+              <img src="<?php echo URL ?>/assets/img/restaurante2up.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Web 2</h4>
-                <p>Web</p>
+                <h4>Restaurante</h4>
                 <div class="portfolio-links">
-                  <a href="<?php echo URL ?>/assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 2"><i class="bi bi-plus"></i></a>
-                  <a href="<?php echo URL ?>/portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                  <a href="<?php echo URL ?>/assets/img/restaurante2up.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-aseo">
             <div class="portfolio-wrap">
-              <img src="<?php echo URL ?>/assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+              <img src="<?php echo URL ?>/assets/img/baño1up.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>App</p>
+                <h4>Aseo</h4>
                 <div class="portfolio-links">
-                  <a href="<?php echo URL ?>/assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="<?php echo URL ?>/portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                  <a href="<?php echo URL ?>/assets/img/baño1up.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-piscina">
             <div class="portfolio-wrap">
-              <img src="<?php echo URL ?>/assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+              <img src="<?php echo URL ?>/assets/img/piscinaveranoup.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Card 1</h4>
-                <p>Card</p>
+                <h4>Piscina</h4>
                 <div class="portfolio-links">
-                  <a href="<?php echo URL ?>/assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 1"><i class="bi bi-plus"></i></a>
-                  <a href="<?php echo URL ?>/portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                  <a href="<?php echo URL ?>/assets/img/piscinaveranoup.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Piscina"><i class="bi bi-plus"></i></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-restaurante">
             <div class="portfolio-wrap">
-              <img src="<?php echo URL ?>/assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+              <img src="<?php echo URL ?>/assets/img/restauranteup.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Card 3</h4>
-                <p>Card</p>
+                <h4>Restaurante</h4>
                 <div class="portfolio-links">
-                  <a href="<?php echo URL ?>/assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 3"><i class="bi bi-plus"></i></a>
-                  <a href="<?php echo URL ?>/portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                  <a href="<?php echo URL ?>/assets/img/restauranteup.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-aseo">
             <div class="portfolio-wrap">
-              <img src="<?php echo URL ?>/assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+              <img src="<?php echo URL ?>/assets/img/bañoup.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
+                <h4>Aseo</h4>
                 <div class="portfolio-links">
-                  <a href="<?php echo URL ?>/assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                  <a href="<?php echo URL ?>/portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                  <a href="<?php echo URL ?>/assets/img/bañoup.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
                 </div>
               </div>
             </div>
@@ -1058,51 +1050,6 @@
       </div>
 
     </section><!-- End Clients Section -->
-
-    <!-- ======= Recent Blog Posts Section ======= -->
-    <section id="recent-blog-posts" class="recent-blog-posts">
-
-      <div class="container" data-aos="fade-up">
-
-        <header class="section-header">
-          <h2>Blog</h2>
-          <p>Recent posts form our Blog</p>
-        </header>
-
-        <div class="row">
-
-          <div class="col-lg-4">
-            <div class="post-box">
-              <div class="post-img"><img src="<?php echo URL ?>/assets/img/blog/blog-1.jpg" class="img-fluid" alt=""></div>
-              <span class="post-date">Tue, September 15</span>
-              <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit</h3>
-              <a href="<?php echo URL ?>/blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="post-box">
-              <div class="post-img"><img src="<?php echo URL ?>/assets/img/blog/blog-2.jpg" class="img-fluid" alt=""></div>
-              <span class="post-date">Fri, August 28</span>
-              <h3 class="post-title">Et repellendus molestiae qui est sed omnis voluptates magnam</h3>
-              <a href="<?php echo URL ?>/blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="post-box">
-              <div class="post-img"><img src="<?php echo URL ?>/assets/img/blog/blog-3.jpg" class="img-fluid" alt=""></div>
-              <span class="post-date">Mon, July 11</span>
-              <h3 class="post-title">Quia assumenda est et veritatis aut quae</h3>
-              <a href="<?php echo URL ?>/blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- End Recent Blog Posts Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
