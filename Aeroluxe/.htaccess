@@ -4,52 +4,13 @@ RewriteEngine On
 
 #cabecera
 RewriteRule ^inicio/?$ index.php [L]
-RewriteRule ^porcomunidad/([\w\s\W+]+)*(|/)$ index.php?controller=busqueda&action=porcomunidad&id=$1 [NC,L]
-RewriteRule ^porprovincia/([\w\s\W+]+)*(|/)$ index.php?controller=busqueda&action=porprovincia&id=$1 [NC,L]
-RewriteRule ^todostalleres/?$ index.php?controller=busqueda&action=todosTalleres [L]
-RewriteRule ^cerrarsesion/?$ index.php?controller=Sesion&action=cerrarSesion [L]
-RewriteRule ^miscoches/?$ index.php?controller=busqueda&action=MisCoches [L]
-RewriteRule ^misreservas/?$ index.php?controller=busqueda&action=MisReservas [L]
-RewriteRule ^alquilervehiculo/?$ index.php?controller=busqueda&action=AlquilerCoches [L]
+    ##logo
+    RewriteRule ^logo/?$ assets/img/logo.png [L]
 
-#index, cabecera, masinfo
-RewriteRule ^iniciarsesion/?$ index.php?controller=Sesion&action=iniciar [L]
-
-#index
-RewriteRule ^enviarcomentario/?$ index.php?controller=Sesion&action=enviarComentario [L]
-
-#index, consultaTalleres
-RewriteRule ^masinformacion/?$ index.php?controller=busqueda&action=masInfo [L]
-
-#index, #masinfo, cabecera
-RewriteRule ^registrar/?$ index.php?controller=Sesion&action=registrar [L]
-
-#registrar
-RewriteRule ^registrarse/?$ index.php?controller=Sesion&action=registrarse [L]
-
-#iniciarSesion
-RewriteRule ^iniciasesion/?$ index.php?controller=Sesion&action=iniciaSesion [L]
-
-#masinfo
-RewriteRule ^pedircita/?$ index.php?controller=Sesion&action=pedirCita [L]
-
-#pedircita
-RewriteRule ^reservar/?$ index.php?controller=Sesion&action=reservar [L]
-
-#miscoches
-RewriteRule ^registrarcoche/?$ index.php?controller=Sesion&action=registrarCoche [L]
-RewriteRule ^eliminarvehiculo/?$ index.php?controller=Sesion&action=eliminarCoche [L]
-
-
-#registrarcoche
-RewriteRule ^registrandocoche/?$ index.php?controller=Sesion&action=registrarCocheForm [L]
-
-#misreservas
-RewriteRule ^cancelarcita/?$ index.php?controller=sesion&action=cancelarCita [L]
-
-#pie
-RewriteRule ^suscribirse/?$ index.php?controller=Sesion&action=suscribirse [L]
-
+#Registro usuario
+RewriteRule ^registro/?$ index.php?controller=Sesion&action=registro [L]
+    ##registrar
+    RewriteRule ^registrarse/?$ index.php?controller=Sesion&action=registrarse [L]
 
 
 
