@@ -52,8 +52,6 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto" href="#services">Servicios</a></li>
-          <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <?php
           if (isset($_SESSION["USER_NOMBRE"]) && !empty($_SESSION["USER_NOMBRE"])) {
           ?>
@@ -68,6 +66,8 @@
           }
           ?>
 
+          <li><a class="nav-link scrollto" href="<?php echo URL . '/registro'?>">Registro</a></li>
+          <li><a class="nav-link scrollto" href="<?php echo URL . '/admin'?>">Admin</a></li>
 
           <?php
           if (isset($_SESSION["USER_NOMBRE"]) && !empty($_SESSION["USER_NOMBRE"])) {
