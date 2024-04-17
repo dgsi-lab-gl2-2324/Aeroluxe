@@ -78,8 +78,6 @@
           <?php
           }
           ?>
-          <li><a class="nav-link scrollto" href="<?php echo URL . '/registro'?>">Registro</a></li>
-
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
           <?php

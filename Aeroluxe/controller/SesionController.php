@@ -162,4 +162,15 @@ class SesionController extends ControladorBase
 
         $this->view($cargarvista, $data);
     }
+    public function cerrarSesion()
+    {
+        $_SESSION["USER_NOMBRE"] = '';
+        $_SESSION['USER_COD'] = '';
+
+        $data = array();
+
+
+
+        $this->view("index", $data);
+    }
 }
