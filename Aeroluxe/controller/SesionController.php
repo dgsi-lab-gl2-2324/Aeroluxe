@@ -97,4 +97,69 @@ class SesionController extends ControladorBase
 
         $this->view($cargarvista, $data);
     }
+
+    public function iniciar()
+    {
+        $data = array();
+        $cargarVista = "index";
+
+        if (isset($_SESSION["USER_NOMBRE"]) && !empty($_SESSION["USER_NOMBRE"])) {
+            
+
+        } else {
+            $mensaje = "";
+            $data['mensaje'] = $mensaje;
+
+            $cargarVista = "iniciarSesion";
+        }
+
+
+        $this->view($cargarVista, $data);
+    }
+
+    public function iniciaSesion()
+    {
+        $data = array();
+        $cargarvista = 'index';
+
+
+        if (isset($_POST['dni']) && isset($_POST['contrasena'])) {
+            $dni = $_POST['dni'];
+            $contrasena = $_POST['contrasena'];
+
+
+            $usuario = $this->cliente->dameClientePorDni($dni);
+            $cargarvista = 'iniciarSesion';
+
+            if ($usuario) {
+
+                if (password_verify($contrasena, $usuario->getClave())) {
+
+                    $_SESSION["USER_NOMBRE"] = $usuario->getNombre();
+
+                    $_SESSION["USER_COD"] = $usuario->getId();
+
+                    $cargarvista = 'index';
+                } else {
+                    $mens = "Datos incorrectos.";
+                    $mensaje = '<div class="alert alert-warning text-center" role="alert">' . $mens . '</div>';
+                    $data['mensaje'] = $mensaje;
+                }
+
+
+            } else {
+                $mens = "Datos incorrectos.";
+                $mensaje = '<div  class="alert alert-warning text-center" role="alert">' . $mens . '</div>';
+                $data['mensaje'] = $mensaje;
+            }
+        } else {
+
+            $mens = "Datos incorrectos.";
+            $mensaje = '<div class="alert alert-warning text-center" role="alert">' . $mens . '</div>';
+            $data['mensaje'] = $mensaje;
+
+        }
+
+        $this->view($cargarvista, $data);
+    }
 }
