@@ -17,39 +17,7 @@ class ClientesModel extends EntidadBase
         parent::__construct($this->table);
     }
 
-    public function dameCliente($email)
-    {
-        $usu = null;
-
-        $sql = "SELECT * FROM $this->table WHERE email = :email;";
-        $statement = $this->db->prepare($sql);
-
-        $statement->bindParam(':email', $email, PDO::PARAM_STR);
-        $statement->execute();
-
-        if ($statement->rowCount() == 1) {
-
-            $row = $statement->fetch();
-
-            $usu = new Clientes(
-                $row['id'],
-                $row['nombre'],
-                $row['apellido1'],
-                $row['apellido2'],
-                $row['dni'],
-                $row['email'],
-                $row['telefono'],
-                $row['clave'],
-                $row['fecha_alta']
-
-            );
-
-        }
-
-        return $usu;
-    }
-
-   
+     
     public function dameDatosCliente($id)
     {
         $usu = null;
@@ -81,6 +49,38 @@ class ClientesModel extends EntidadBase
 
 
             }
+
+        }
+
+        return $usu;
+    }
+
+    public function dameClientePorDni($dni)
+    {
+        $usu = null;
+
+        $sql = "SELECT * FROM $this->table WHERE dni = :dni;";
+        $statement = $this->db->prepare($sql);
+
+        $statement->bindParam(':dni', $dni, PDO::PARAM_STR);
+        $statement->execute();
+
+        if ($statement->rowCount() == 1) {
+
+            $row = $statement->fetch();
+
+            $usu = new Clientes(
+                $row['id'],
+                $row['nombre'],
+                $row['apellido1'],
+                $row['apellido2'],
+                $row['dni'],
+                $row['email'],
+                $row['telefono'],
+                $row['clave'],
+                $row['fecha_alta']
+
+            );
 
         }
 
