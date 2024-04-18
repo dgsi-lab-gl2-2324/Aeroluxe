@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-04-2024 a las 18:23:02
+-- Tiempo de generación: 18-04-2024 a las 20:46:22
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -32,10 +32,19 @@ CREATE TABLE `clientes` (
   `nombre` varchar(20) NOT NULL,
   `apellido1` varchar(30) NOT NULL,
   `apellido2` varchar(30) NOT NULL,
-  `dni` text NOT NULL,
+  `dni` varchar(10) NOT NULL,
   `email` varchar(40) NOT NULL,
-  `telefono` bigint(10) NOT NULL
+  `telefono` varchar(10) NOT NULL,
+  `clave` varchar(255) NOT NULL,
+  `fecha_alta` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `clientes`
+--
+
+INSERT INTO `clientes` (`id`, `nombre`, `apellido1`, `apellido2`, `dni`, `email`, `telefono`, `clave`, `fecha_alta`) VALUES
+(13, 'Alonso', 'wer', 'wert', '9999', 'a@c.x', '123456789', '$2y$10$iehLNlCAhxV0ImddXqQ35uk75yXYUiqQ0tUq65yJMxV5u543uMAgC', '2024-04-17');
 
 -- --------------------------------------------------------
 
@@ -91,7 +100,8 @@ CREATE TABLE `tipo_cliente` (
 -- Indices de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `dni` (`dni`);
 
 --
 -- Indices de la tabla `clientes_en_piscina`
@@ -128,7 +138,7 @@ ALTER TABLE `tipo_cliente`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id` int(99) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(99) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `clientes_en_piscina`
