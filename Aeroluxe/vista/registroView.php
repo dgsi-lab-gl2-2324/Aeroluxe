@@ -10,7 +10,7 @@
                 $mensaje = $datos['mensaje'];
                 if ($mensaje != null) {
                     echo $mensaje;
-                }   
+                }
                 ?>
 
             </div>

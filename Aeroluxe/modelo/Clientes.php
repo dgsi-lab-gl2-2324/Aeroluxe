@@ -35,7 +35,7 @@ class Clientes
     /**
      * @var clave
      */
-    private string $clave;
+    private $clave;
     /**
      * @var fecha_alta
      */
@@ -53,7 +53,7 @@ class Clientes
      * @param $clave
      * @param $fechaalta
      */
-    public function __construct($id, $nombre, $apellido1, $apellido2, $dni, $email, $telef, string $clave, $fechaalta)
+    public function __construct($id, $nombre, $apellido1, $apellido2, $dni, $email, $telef, $clave, $fechaalta)
     {
         $this->id = $id;
         $this->nombre = $nombre;
@@ -180,7 +180,7 @@ class Clientes
     }
 
     /**
-     * @return string
+     * @return clave
      */
     public function getClave()
     {
@@ -190,7 +190,7 @@ class Clientes
     /**
      * @param clave
      */
-    public function setClave(string $clave)
+    public function setClave($clave)
     {
         $this->clave = $clave;
     }

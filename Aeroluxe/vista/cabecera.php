@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -40,8 +39,8 @@
 <body class="main-layout">
 
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top">
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="<?php echo URL; ?>/inicio" class="logo d-flex align-items-center">
@@ -52,54 +51,11 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto" href="#services">Servicios</a></li>
-          <?php
-          if (isset($_SESSION["USER_NOMBRE"]) && !empty($_SESSION["USER_NOMBRE"])) {
-          ?>
-            <li><a class="nav-link scrollto" href="<?php echo URL . '/cerrarsesion' ?>">Cerrar Sesión</a></li>
-
-          <?php
-          } else {
-          ?>
-            <li><a class="nav-link scrollto" href="<?php echo URL . '/iniciarSesion' ?>">Iniciar Sesión</a></li>
-
-          <?php
-          }
-          ?>
-
           <li><a class="nav-link scrollto" href="<?php echo URL . '/registro'?>">Registro</a></li>
           <li><a class="nav-link scrollto" href="<?php echo URL . '/admin'?>">Admin</a></li>
-          <li><a class="nav-link scrollto" href="<?php echo URL . '/perfil'?>">Mi perfil</a></li>
 
-          <?php
-          if (isset($_SESSION["USER_NOMBRE"]) && !empty($_SESSION["USER_NOMBRE"])) {
-          } else {
-          ?>
-            <li><a class="nav-link scrollto" href="<?php echo URL . '/registro' ?>">Registro</a></li>
-
-          <?php
-          }
-          ?>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
-          <?php
-          if (isset($_SESSION["USER_NOMBRE"]) && !empty($_SESSION["USER_NOMBRE"])) {
-
-            // Obtener la hora actual del servidor
-            $hora = date("H");
-
-            // Determinar el mensaje según la hora del día
-            if ($hora >= 6 && $hora < 12) {
-              $saludo = "Buenos días";
-            } elseif ($hora >= 12 && $hora < 18) {
-              $saludo = "Buenas tardes";
-            } else {
-              $saludo = "Buenas noches";
-            }
-
-            // Mostrar el mensaje con el nombre del usuario
-            echo "<strong>" . $saludo . ": " . $_SESSION["USER_NOMBRE"] . "</strong>";
-          }
-          ?>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
