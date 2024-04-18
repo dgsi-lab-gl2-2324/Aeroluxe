@@ -16,5 +16,8 @@ RewriteRule ^registro/?$ index.php?controller=Sesion&action=registro [L]
     ##registrar
     RewriteRule ^registrarse/?$ index.php?controller=Sesion&action=registrarse [L]
 
-
-
+#Login usuario 
+RewriteRule ^iniciarSesion/?$ index.php?controller=Sesion&action=iniciar [L]
+RewriteRule ^iniciasesion/?$ index.php?controller=Sesion&action=iniciaSesion [L]
+#Usuario admin
+RewriteRule ^admin/?$ index.php?controller=Controlador&action=admin [L]
