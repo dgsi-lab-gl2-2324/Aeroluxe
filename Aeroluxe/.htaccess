@@ -4,6 +4,8 @@ RewriteEngine On
 
 #cabecera
 RewriteRule ^inicio/?$ index.php [L]
+RewriteRule ^cerrarsesion/?$ index.php?controller=Sesion&action=cerrarSesion [L]
+
     ##logo
     RewriteRule ^logo/?$ assets/img/logo.png [L]
 
@@ -13,7 +15,6 @@ RewriteRule ^inicio/?$ index.php [L]
 RewriteRule ^registro/?$ index.php?controller=Sesion&action=registro [L]
     ##registrar
     RewriteRule ^registrarse/?$ index.php?controller=Sesion&action=registrarse [L]
-
 
 
 
