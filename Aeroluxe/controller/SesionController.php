@@ -173,4 +173,14 @@ class SesionController extends ControladorBase
 
         $this->view("index", $data);
     }
+
+    public function perfil()
+    {
+        $data = array();
+
+        $mensaje = "";
+        $data['mensaje'] = $mensaje;
+
+        $this->view("perfiluser", $data);
+    }
 }
