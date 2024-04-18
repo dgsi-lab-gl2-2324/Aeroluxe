@@ -6,13 +6,6 @@
             <div class="col-lg-12">
                 <h1 class="text-primary text-center">REGISTRAR NUEVO ADMINISTRADOR</h1>
 
-                <?php
-                $mensaje = $datos['mensaje'];
-                if ($mensaje != null) {
-                    echo $mensaje;
-                }
-                ?>
-
             </div>
 
             <form method="post" action="<?php echo URL . '/registraradmin'; ?>">
