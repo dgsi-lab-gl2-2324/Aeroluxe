@@ -41,6 +41,9 @@ class ControladorController extends ControladorBase
         $data['mensaje'] = $mensaje;
 
         $this->view("admin", $data);
+
+
+        
     }
 
 }
