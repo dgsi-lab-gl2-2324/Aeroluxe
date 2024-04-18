@@ -9,6 +9,7 @@ RewriteRule ^cerrarsesion/?$ index.php?controller=Sesion&action=cerrarSesion [L]
     ##logo
     RewriteRule ^logo/?$ assets/img/logo.png [L]
 
+    RewriteRule ^perfil/?$ index.php?controller=Sesion&action=perfil [L]
 
 #Registro usuario
 RewriteRule ^registro/?$ index.php?controller=Sesion&action=registro [L]
@@ -20,7 +21,3 @@ RewriteRule ^iniciarSesion/?$ index.php?controller=Sesion&action=iniciar [L]
 RewriteRule ^iniciasesion/?$ index.php?controller=Sesion&action=iniciaSesion [L]
 #Usuario admin
 RewriteRule ^admin/?$ index.php?controller=Controlador&action=admin [L]
-
-
-
-
