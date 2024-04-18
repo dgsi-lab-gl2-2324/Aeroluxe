@@ -56,6 +56,7 @@
           <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a class="nav-link scrollto" href="<?php echo URL . '/registro'?>">Registro</a></li>
+          <li><a class="nav-link scrollto" href="<?php echo URL . '/perfil'?>">Mi perfil</a></li>
 
           <li><a href="blog.html">Blog</a></li>
           <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
