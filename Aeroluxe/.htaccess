@@ -28,5 +28,16 @@ RewriteRule ^admin/?$ index.php?controller=Controlador&action=admin [L]
     ##mostrar clientes
     RewriteRule ^menuAdminClientes/?$ index.php?controller=Controlador&action=mostrarClientes [L]
 
+    ##galeria
+    RewriteRule ^menuAdminGaleria/?$ index.php?controller=Controlador&action=editarGaleria [L]
+    ##editar galeria
+    RewriteRule ^editarGaleria/?$ index.php?controller=Controlador&action=editarGaleria [L]
+    ##añadir foto
+    RewriteRule ^anadirFoto/?$ index.php?controller=Controlador&action=anadirFoto [L]
+    ##mostrar tipo foto
+    RewriteRule ^mostrarTipoFoto/?$ index.php?controller=Controlador&action=mostrarTipoFoto [L]
+    ##añadir tipo de foto
+    RewriteRule ^anadirTipoFoto/?$ index.php?controller=Controlador&action=anadirTipoFoto [L]
+
 
 
