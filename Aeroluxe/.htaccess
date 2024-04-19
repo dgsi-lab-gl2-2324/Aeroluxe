@@ -10,6 +10,7 @@ RewriteRule ^cerrarsesion/?$ index.php?controller=Sesion&action=cerrarSesion [L]
     RewriteRule ^logo/?$ assets/img/logo.png [L]
 
     RewriteRule ^perfil/?$ index.php?controller=Sesion&action=perfil [L]
+    RewriteRule ^actualizarperfil/?$ index.php?controller=Sesion&action=editarPerfil [L]
 
 #Registro usuario
 RewriteRule ^registro/?$ index.php?controller=Sesion&action=registro [L]
