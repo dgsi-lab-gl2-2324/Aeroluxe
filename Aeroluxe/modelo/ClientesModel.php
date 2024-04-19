@@ -116,6 +116,7 @@ class ClientesModel extends EntidadBase
         return $inserto;
     }
 
+
     public function updateUsuario($dni, $nombre, $ape1, $ape2, $email, $tlf, $direccion)
     {
         $inserto = false;
@@ -141,7 +142,34 @@ class ClientesModel extends EntidadBase
         return $save;
     }
 
-   
+    public function dameTodosClientes()
+    {
+        $clientes = array();
 
+        $sql = "SELECT * FROM $this->table;";
+        $statement = $this->db->prepare($sql);
+        $statement->execute();
+
+        if ($statement->rowCount() >=1) {
+
+            $table = $statement->fetchAll();
+
+            foreach ($table as $row) {
+
+                array_push($clientes, new Clientes(
+                    $row['id'],
+                    $row['nombre'],
+                    $row['apellido1'],
+                    $row['apellido2'],
+                    $row['dni'],
+                    $row['email'],
+                    $row['telefono'],
+                    $row['clave'],
+                    $row['fecha_alta']
+                ));
+            }
+        }
+        return $clientes;
+    }
 
 }

@@ -16,7 +16,7 @@ class Clientes
      * @var apellido1
      */
     private $apellido1;
-    /**
+    /**     
      * @var apellido2
      */
     private $apellido2;

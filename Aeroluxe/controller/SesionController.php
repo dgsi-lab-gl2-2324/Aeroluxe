@@ -10,6 +10,10 @@ class SesionController extends ControladorBase
      */
     public $cliente;
 
+    /**
+     * @var AdminModel
+     */
+    public $admin;
 
     /**
      * SesionController constructor.
@@ -18,10 +22,8 @@ class SesionController extends ControladorBase
     {
         parent::__construct();
         $this->cliente = new ClientesModel();
+        $this->admin = new AdminModel();
     }
-
-
-
 
     public function registro()
     {
@@ -94,6 +96,57 @@ class SesionController extends ControladorBase
         }
 
 
+        $this->view($cargarvista, $data);
+    }
+
+    public function registrarAdmin()
+    {
+        $data = array();
+
+        $cargarvista = "index";
+
+        if (isset($_SESSION["USER_NOMBRE"]) && !empty($_SESSION["USER_NOMBRE"])) {
+        
+        } else {
+            if (
+                isset($_POST['nombre']) &&
+                isset($_POST['dni']) && 
+                isset($_POST['contrasena']) &&
+                isset($_POST['contrasenaRep'])
+            ) {
+
+                $nombre = $_POST['nombre'];
+                $dni = $_POST['dni'];
+                $clave = $_POST['contrasena'];
+                $clave2 = $_POST['contrasenaRep'];
+
+                if ($clave == $clave2) {
+                    $clave = password_hash($_POST['contrasena'], PASSWORD_DEFAULT);
+
+                    $inserto = $this->admin->insertarAdmin($nombre, $dni, $clave);
+
+                    if ($inserto) {
+
+                        $datosAd = $this->admin->dameAdminPorDni($dni);
+                        $data['datosAd'] = $datosAd;
+
+                        $_SESSION["USER_NOMBRE"] = $nombre;
+                        $_SESSION["USER_COD"] = $datosAd->getId();
+                        $cargarvista = 'index';
+                    } else {
+                        $mens = "Usuario ya existente";
+                        $mensaje = '<div class="alert alert-warning text-center" role="alert">' . $mens . '</div>';
+                        $data['mensaje'] = $mensaje;
+                        $cargarvista = 'registro';
+                    }
+                } else {
+                    $mens = "Claves no coinciden";
+                    $mensaje = '<div class="alert alert-warning text-center" role="alert">' . $mens . '</div>';
+                    $data['mensaje'] = $mensaje;
+                    $cargarvista = 'registro';
+                }
+            }
+        }
         $this->view($cargarvista, $data);
     }
 
