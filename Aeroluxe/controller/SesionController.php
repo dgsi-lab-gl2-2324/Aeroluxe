@@ -31,7 +31,6 @@ class SesionController extends ControladorBase
 
         $cargarVista = "index";
         if (isset($_SESSION["USER_NOMBRE"]) && !empty($_SESSION["USER_NOMBRE"])) {
-
         } else {
             $cargarVista = "registro";
         }
@@ -50,13 +49,12 @@ class SesionController extends ControladorBase
         $cargarvista = "index";
 
         if (isset($_SESSION["USER_NOMBRE"]) && !empty($_SESSION["USER_NOMBRE"])) {
-        
         } else {
             if (
                 isset($_POST['nombre']) && isset($_POST['ape1']) && isset($_POST['ape2']) &&
                 isset($_POST['dni']) && isset($_POST['contrasena']) &&
                 isset($_POST['contrasenaRep']) && isset($_POST['email']) &&
-                isset($_POST['telef'])
+                isset($_POST['telef']) && isset($_POST['direccion'])
             ) {
 
                 $nombre = $_POST['nombre'];
@@ -67,11 +65,12 @@ class SesionController extends ControladorBase
                 $clave2 = $_POST['contrasenaRep'];
                 $email = $_POST['email'];
                 $tlf = $_POST['telef'];
+                $direccion = $_POST['direccion'];
 
                 if ($clave == $clave2) {
                     $clave = password_hash($_POST['contrasena'], PASSWORD_DEFAULT);
 
-                    $inserto = $this->cliente->insertarUsuario($nombre, $ape1, $ape2, $dni, $email, $tlf, $clave);
+                    $inserto = $this->cliente->insertarUsuario($nombre, $ape1, $ape2, $dni, $email, $tlf, $clave, $direccion);
 
                     if ($inserto) {
 
@@ -157,8 +156,6 @@ class SesionController extends ControladorBase
         $cargarVista = "index";
 
         if (isset($_SESSION["USER_NOMBRE"]) && !empty($_SESSION["USER_NOMBRE"])) {
-            
-
         } else {
             $mensaje = "";
             $data['mensaje'] = $mensaje;
@@ -189,7 +186,7 @@ class SesionController extends ControladorBase
                 if (password_verify($contrasena, $usuario->getClave())) {
 
                     $_SESSION["USER_NOMBRE"] = $usuario->getNombre();
-
+                    $_SESSION["USER_DNI"] = $usuario->getDni();
                     $_SESSION["USER_COD"] = $usuario->getId();
 
                     $cargarvista = 'index';
@@ -198,8 +195,6 @@ class SesionController extends ControladorBase
                     $mensaje = '<div class="alert alert-warning text-center" role="alert">' . $mens . '</div>';
                     $data['mensaje'] = $mensaje;
                 }
-
-
             } else {
                 $mens = "Datos incorrectos.";
                 $mensaje = '<div  class="alert alert-warning text-center" role="alert">' . $mens . '</div>';
@@ -210,7 +205,6 @@ class SesionController extends ControladorBase
             $mens = "Datos incorrectos.";
             $mensaje = '<div class="alert alert-warning text-center" role="alert">' . $mens . '</div>';
             $data['mensaje'] = $mensaje;
-
         }
 
         $this->view($cargarvista, $data);
@@ -231,8 +225,36 @@ class SesionController extends ControladorBase
     {
         $data = array();
 
-        $mensaje = "";
-        $data['mensaje'] = $mensaje;
+        if (isset($_SESSION["USER_NOMBRE"]) && !empty($_SESSION["USER_NOMBRE"])) {
+            $data['username'] = $_SESSION["USER_NOMBRE"];
+            $usuario = $this->cliente->dameClientePorDni($_SESSION["USER_DNI"]);
+            $data['usuario'] = $usuario;
+        }
+
+        $this->view("perfiluser", $data);
+    }
+
+    public function editarPerfil()
+    {
+        $data = array();
+
+        if (isset($_SESSION["USER_NOMBRE"]) && !empty($_SESSION["USER_NOMBRE"])) {
+            if (
+                isset($_POST['nombre']) && isset($_POST['apellido1']) && 
+                isset($_POST['apellido2']) && isset($_POST['email']) &&
+                isset($_POST['telefono']) && isset($_POST['direccion'])
+            ) {
+
+                $nombre = $_POST['nombre'];
+                $ape1 = $_POST['apellido1'];
+                $ape2 = $_POST['apellido2'];
+                $email = $_POST['email'];
+                $tlf = $_POST['telefono'];
+                $direccion = $_POST['direccion'];
+
+                $inserto = $this->cliente->updateUsuario($_SESSION["USER_DNI"],$nombre, $ape1, $ape2, $email, $tlf, $direccion);
+        }
+    }
 
         $this->view("perfiluser", $data);
     }

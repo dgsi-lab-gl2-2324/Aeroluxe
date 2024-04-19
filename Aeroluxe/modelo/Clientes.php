@@ -40,6 +40,10 @@ class Clientes
      * @var fecha_alta
      */
     private $fechaalta;
+    /**
+     * @var direccion
+     */
+    private $direccion;
 
     /**
      * Clientes constructor.
@@ -52,8 +56,9 @@ class Clientes
      * @param $telef
      * @param $clave
      * @param $fechaalta
+     * @param $direccion
      */
-    public function __construct($id, $nombre, $apellido1, $apellido2, $dni, $email, $telef, string $clave, $fechaalta)
+    public function __construct($id, $nombre, $apellido1, $apellido2, $dni, $email, $telef, string $clave, $fechaalta, $direccion)
     {
         $this->id = $id;
         $this->nombre = $nombre;
@@ -64,6 +69,7 @@ class Clientes
         $this->telef = $telef;
         $this->clave = $clave;
         $this->fechaalta = $fechaalta;
+        $this->direccion = $direccion;
     }
 
     /**
@@ -209,5 +215,21 @@ class Clientes
     public function setFechaalta($fechaalta)
     {
         $this->fechaalta = $fechaalta;
+    }
+
+    /**
+     * @return direccion
+     */
+    public function getDireccion()
+    {
+        return $this->direccion;
+    }
+
+    /**
+     * @param direccion
+     */
+    public function setDireccion($direccion)
+    {
+        $this->direccion = $direccion;
     }
 }
