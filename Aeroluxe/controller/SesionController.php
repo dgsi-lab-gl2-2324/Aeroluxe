@@ -199,10 +199,10 @@ class SesionController extends ControladorBase
                 $tlf = $_POST['telefono'];
                 $direccion = $_POST['direccion'];
 
-                $inserto = $this->cliente->updateUsuario($nombre, $ape1, $ape2, $email, $tlf, $direccion);
+                $inserto = $this->cliente->updateUsuario($_SESSION["USER_DNI"],$nombre, $ape1, $ape2, $email, $tlf, $direccion);
         }
     }
 
-        $this->view("editarPerfil", $data);
+        $this->view("perfiluser", $data);
     }
 }
