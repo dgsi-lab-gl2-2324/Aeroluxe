@@ -33,6 +33,7 @@ class ControladorController extends ControladorBase
 
         $data['datosCli'] = "";
 
+
         $this->view("index", $data);
     }
 
@@ -42,6 +43,7 @@ class ControladorController extends ControladorBase
 
         $opcion = "";
         $data['opcion'] = $opcion;
+
 
         $this->view("admin", $data);
     }
