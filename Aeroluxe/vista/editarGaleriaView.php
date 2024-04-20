@@ -7,6 +7,11 @@
                 <h1 class="text-primary text-center">GALERÍA</h1>
             </div>
 
+            <?php
+            $tipos = $datos['tipos'];
+
+            ?>
+
             <button class="btn btn-primary" onclick="document.getElementById('fileInput').click()">Añadir Foto</button>
 
             <form enctype="multipart/form-data" method="post" action="<?php echo URL . '/anadirFoto'; ?>">
@@ -24,16 +29,15 @@
                                 <select class="form-control" name="photoType" required id="photoType">
                                     <option value="">Selecciona un tipo</option>
                                     <?php
-                                    $tipos = $datos['tipos'];
+                                    
                                     if ($tipos) {
-                                        $i = 1;
                                         foreach ($tipos as $tipo) {
 
+
                                     ?>
-                                            <option value="<?php echo $i ?>"><?php echo $tipo->getTipo(); ?></option>
+                                            <option value="<?php echo $tipo->getId()?>"><?php echo $tipo->getTipo(); ?></option>
 
                                     <?php
-                                            $i++;
                                         }
                                     }
 

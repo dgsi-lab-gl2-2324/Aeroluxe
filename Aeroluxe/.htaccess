@@ -30,7 +30,7 @@ RewriteRule ^admin/?$ index.php?controller=Controlador&action=admin [L]
     RewriteRule ^menuAdminClientes/?$ index.php?controller=Controlador&action=mostrarClientes [L]
 
     ##galeria
-    RewriteRule ^menuAdminGaleria/?$ index.php?controller=Controlador&action=editarGaleria [L]
+    RewriteRule ^menuAdminGaleria/?$ index.php?controller=Controlador&action=verGaleria [L]
     ##editar galeria
     RewriteRule ^editarGaleria/?$ index.php?controller=Controlador&action=editarGaleria [L]
     ##añadir foto

@@ -76,7 +76,25 @@ class ControladorController extends ControladorBase
         $this->view("admin", $data);
     }
 
-    public function editarGaleria()
+    public function verGaleria()
+    {
+        $data = array();
+
+        $opcion = "galeria";
+        $data['opcion'] = $opcion;
+
+        $fotos = $this->fotos->dameTodasFotos();
+        $tipos = $this->tipos->dameTipos();
+
+        $data['galeria'] = $fotos;
+        $data['tipos'] = $tipos;
+
+        $data['mensaje'] = "";
+
+        $this->view("admin", $data);
+    }
+
+    public function mostrarFotosGaleria()
     {
         $data = array();
 
@@ -102,8 +120,10 @@ class ControladorController extends ControladorBase
         $data['opcion'] = $opcion;
 
         $fotos = $this->fotos->dameTodasFotos();
+        $tipos = $this->tipos->dameTipos();
 
         $data['galeria'] = $fotos;
+        $data['tipos'] = $tipos;
         $data['mensaje'] = "";
 
             if (isset($_POST['photoType']) && isset($_FILES['img']) && $_FILES['img']['error'] == 0) {
