@@ -10,7 +10,7 @@
                 $mensaje = $datos['mensaje'];
                 if ($mensaje != null) {
                     echo $mensaje;
-                }   
+                }
                 ?>
 
             </div>
@@ -33,6 +33,10 @@
                 <div class="form-group">
                     <label for="inputNumber">dni</label>
                     <input type="text" name="dni" maxlength="50" required class="form-control" id="inputEmail4">
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress2">Dirección</label>
+                    <input type="text" name="direccion" class="form-control" maxlength="50" required id="inputAddress2" placeholder="C/Sol N4">
                 </div>
                 <div class="form-group">
                     <label for="inputPassword4">Contraseña</label>
