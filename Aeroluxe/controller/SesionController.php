@@ -234,7 +234,7 @@ class SesionController extends ControladorBase
         $this->view("perfiluser", $data);
     }
 
-    public function editarPerfil()
+    public function actualizarperfil()
     {
         $data = array();
 
@@ -253,6 +253,13 @@ class SesionController extends ControladorBase
                 $direccion = $_POST['direccion'];
 
                 $inserto = $this->cliente->updateUsuario($_SESSION["USER_DNI"],$nombre, $ape1, $ape2, $email, $tlf, $direccion);
+
+                if ($inserto) {
+                    $data['mensaje'] = "Perfil actualizado correctamente.";
+                } else {
+                    $data['mensaje'] = "Error al actualizar el perfil.";
+                }
+                
         }
     }
 

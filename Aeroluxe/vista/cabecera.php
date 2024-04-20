@@ -67,7 +67,7 @@
           ?>
 
           <li><a class="nav-link scrollto" href="<?php echo URL . '/admin'?>">Admin</a></li>
-          <li><a class="nav-link scrollto" href="<?php echo URL . '/perfil'?>">Mi perfil</a></li>
+          
 
           <?php
           if (isset($_SESSION["USER_NOMBRE"]) && !empty($_SESSION["USER_NOMBRE"])) {
@@ -80,6 +80,7 @@
           ?>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+          <li><a>   </a></li>
           <?php
           if (isset($_SESSION["USER_NOMBRE"]) && !empty($_SESSION["USER_NOMBRE"])) {
 
@@ -96,9 +97,10 @@
             }
 
             // Mostrar el mensaje con el nombre del usuario
-            echo "<strong>" . $saludo . ": " . $_SESSION["USER_NOMBRE"] . "</strong>";
+            echo "<strong>" . $saludo . ": " . "</strong>";
           }
           ?>
+          <li><a class="nav-link scrollto" href="<?php echo URL . '/perfil'?>"><?php echo "<strong>".$_SESSION["USER_NOMBRE"]."</strong>"; ?></a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
