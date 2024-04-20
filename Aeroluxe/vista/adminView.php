@@ -1,5 +1,7 @@
 <main id="main">
-
+<?php
+ $mensaje = $datos['mensaje'];
+?>
   <!-- ======= Breadcrumbs ======= -->
   <section class="breadcrumbs">
     <div class="container">
@@ -23,7 +25,6 @@
 
 
                 <?php
-                $mensaje = $datos['mensaje'];
                 if ($mensaje != null) {
                   echo $mensaje;
                 }

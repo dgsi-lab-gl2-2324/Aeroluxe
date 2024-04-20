@@ -34,11 +34,13 @@ RewriteRule ^admin/?$ index.php?controller=Controlador&action=admin [L]
     ##editar galeria
     RewriteRule ^editarGaleria/?$ index.php?controller=Controlador&action=editarGaleria [L]
     ##añadir foto
-    RewriteRule ^anadirFoto/?$ index.php?controller=Controlador&action=anadirFoto [L]
+    RewriteRule ^anadirFoto4/?$ index.php?controller=Controlador&action=anadirFoto [L]
     ##mostrar tipo foto
     RewriteRule ^mostrarTipoFoto/?$ index.php?controller=Controlador&action=mostrarTipoFoto [L]
     ##añadir tipo de foto
     RewriteRule ^anadirTipoFoto/?$ index.php?controller=Controlador&action=anadirTipoFoto [L]
+    ##editar tipo de foto
+    RewriteRule ^editarTipoFoto/?$ index.php?controller=Controlador&action=editarTipoFoto [L]
 
 
 

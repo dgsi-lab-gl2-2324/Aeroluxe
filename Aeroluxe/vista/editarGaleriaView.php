@@ -10,12 +10,23 @@
             <?php
             $tipos = $datos['tipos'];
             $fotos = $datos['fotos'];
+            $mensaje = $datos['mensaje'];
+
+            $redirige = $datos['redirige'];
+            if ($redirige != null) {
+            ?>
+                <form id="autoSubmitForm" action="<?php echo URL . '/menuAdminGaleria'; ?>" method="POST">
+                    <input type="hidden" name="mensaje" value="<?php echo $mensaje; ?>">
+                </form>
+            <?php
+                # echo "<script>window.location='" . URL . "/menuAdminGaleria';</script>";
+            }
 
             ?>
 
             <button class="btn btn-primary" onclick="document.getElementById('fileInput').click()">Añadir Foto</button>
 
-            <form enctype="multipart/form-data" method="post" action="<?php echo URL . '/anadirFoto'; ?>">
+            <form enctype="multipart/form-data" method="post" action="<?php echo URL . '/anadirFoto4'; ?>">
                 <input type="file" name="img" id="fileInput" style="display:none">
 
                 <table class="table">
@@ -107,32 +118,77 @@
                         </div>
                     </div>
 
+
+
                     <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
                         <?php
-
                         if ($fotos) {
                             foreach ($fotos as $foto) {
+                                // Asegúrate de que aquí solo se produce un conjunto de elementos por foto
                         ?>
-
                                 <div class="col-lg-4 col-md-6 portfolio-item filter-<?php echo $foto->getTipo(); ?>">
                                     <div class="portfolio-wrap">
-                                        <!-- Asegúrate de que la imagen se codifique en base64 si getImagen retorna datos binarios -->
                                         <img src="data:image/jpeg;base64,<?php echo base64_encode($foto->getImagen()) ?>" class="img-fluid" alt="">
                                         <div class="portfolio-info">
                                             <div class="portfolio-links">
-                                                <!-- Esto ya estaba correctamente codificado en base64 -->
-                                                <a href="data:image/jpeg;base64,<?php echo base64_encode($foto->getImagen()) ?>" data-gallery="portfolioGallery" class="portfokio-lightbox" title="<?php echo $foto->getTipo(); ?>"><i class="bi bi-plus"></i></a>
+                                                <!-- Enlace para abrir el modal de edición -->
+                                                <a href="#editPhotoModal" data-bs-toggle="modal" class="edit-btn" title="Editar imagen" data-id="<?php echo $foto->getId(); ?>" data-tipo="<?php echo $foto->getTipo(); ?>"><i class="bi bi-pencil"></i></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                         <?php
                             }
                         }
-
                         ?>
                     </div>
+
+
+                    <!-- Modal de edición -->
+                    <div class="modal fade" id="editPhotoModal" tabindex="-1" aria-labelledby="editPhotoModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="editPhotoModalLabel">Editar Tipo de Foto</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form method="post" action="<?php echo URL . '/editarTipoFoto'; ?>">
+                                        <div class="form-group">
+                                            <label for="photoTypeInput">Tipo de foto:</label>
+                                            <input type="text" class="form-control" id="photoTypeInput" name="tipofoto">
+                                            <input type="hidden" id="photoIdInput" name="fotoid">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                    <button type="submit" class="btn btn-primary">Guardar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        // Asegúrate de que este script se ejecute después de que la página se haya cargado completamente
+                        document.addEventListener("DOMContentLoaded", function() {
+                            // Añadir evento click a cada botón de edición
+                            var editButtons = document.querySelectorAll('.edit-btn');
+                            editButtons.forEach(function(btn) {
+                                btn.addEventListener('click', function() {
+                                    // Rellenar el formulario del modal con los datos de la foto
+                                    var fotoId = this.getAttribute('data-id');
+                                    var fotoTipo = this.getAttribute('data-tipo');
+
+                                    document.getElementById('photoTypeInput').value = fotoTipo;
+                                    document.getElementById('photoIdInput').value = fotoId;
+                                });
+                            });
+                        });
+                    </script>
+
+
+
                 </div>
             </section>
 
@@ -158,3 +214,10 @@
 
     document.getElementById('fileInput').addEventListener('change', previewImage);
 </script>
+
+<script>
+        // Script para enviar el formulario automáticamente cuando la página carga
+        window.onload = function() {
+            document.getElementById('autoSubmitForm').submit();
+        };
+    </script>

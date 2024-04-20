@@ -58,4 +58,21 @@ class TiposModel extends EntidadBase
         }
         return $inserto;
     }
+
+    public function borrarTipo($id)
+    {
+        $sql = "DELETE FROM $this->table WHERE id = :id";
+        $statement = $this->db->prepare($sql);
+
+        $statement->bindParam(':id', $id, PDO::PARAM_INT);
+
+        try {
+            $save = $statement->execute();
+            $borrado = true;
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+            $borrado = false;
+        }
+        return $borrado;
+    }
 }
