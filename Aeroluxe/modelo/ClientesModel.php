@@ -43,7 +43,8 @@ class ClientesModel extends EntidadBase
                     $row['email'],
                     $row['telefono'],
                     $row['clave'],
-                    $row['fecha_alta']
+                    $row['fecha_alta'],
+                    $row['direccion']
 
                 );
 
@@ -78,8 +79,8 @@ class ClientesModel extends EntidadBase
                 $row['email'],
                 $row['telefono'],
                 $row['clave'],
-                $row['fecha_alta']
-
+                $row['fecha_alta'],
+                $row['direccion']
             );
 
         }
@@ -88,13 +89,13 @@ class ClientesModel extends EntidadBase
     }
 
   
-    public function insertarUsuario($nombre, $ape1, $ape2, $dni, $email, $tlf, $clave)
+    public function insertarUsuario($nombre, $ape1, $ape2, $dni, $email, $tlf, $clave, $direccion)
     {
         $inserto = false;
 
         $sql = "INSERT INTO $this->table "
-            . " (nombre,apellido1,apellido2,dni,email,telefono,clave,fecha_alta)"
-            . " VALUES(:nombre, :ape1, :ape2, :dni,:email,:telefono, :clave, curdate())";
+            . " (nombre,apellido1,apellido2,dni,email,telefono,clave,fecha_alta,direccion) "
+            . " VALUES(:nombre, :ape1, :ape2, :dni,:email,:telefono, :clave, curdate(), :direccion)";
         $statement = $this->db->prepare($sql);
 
         $statement->bindParam(':nombre', $nombre, PDO::PARAM_STR);
@@ -104,6 +105,7 @@ class ClientesModel extends EntidadBase
         $statement->bindParam(':email', $email, PDO::PARAM_STR);
         $statement->bindParam(':telefono', $tlf, PDO::PARAM_STR);
         $statement->bindParam(':clave', $clave, PDO::PARAM_STR);
+        $statement->bindParam(':direccion', $direccion, PDO::PARAM_STR);
 
         try {
             $save = $statement->execute();
@@ -112,6 +114,32 @@ class ClientesModel extends EntidadBase
             $inserto = false;
         }
         return $inserto;
+    }
+
+
+    public function updateUsuario($dni, $nombre, $ape1, $ape2, $email, $tlf, $direccion)
+    {
+        $inserto = false;
+
+        $sql = "UPDATE TABLE $this->table (nombre,apellido1,apellido2,email,telefono,direccion) VALUES(:nombre, :ape1, :ape2,:email,:telefono, :direccion)  WHERE dni = :dni;";
+        $statement = $this->db->prepare($sql);
+
+        $statement->bindParam(':nombre', $nombre, PDO::PARAM_STR);
+        $statement->bindParam(':ape1', $ape1, PDO::PARAM_STR);
+        $statement->bindParam(':ape2', $ape2, PDO::PARAM_STR);
+        $statement->bindParam(':email', $email, PDO::PARAM_STR);
+        $statement->bindParam(':telefono', $tlf, PDO::PARAM_STR);
+        $statement->bindParam(':direccion', $direccion, PDO::PARAM_STR);
+        $statement->bindParam(':dni', $dni, PDO::PARAM_STR);
+
+
+        try {
+            $save = $statement->execute();
+            $save = true;
+        } catch (PDOException $e) {
+            $save = false;
+        }
+        return $save;
     }
 
     public function dameTodosClientes()
@@ -143,6 +171,5 @@ class ClientesModel extends EntidadBase
         }
         return $clientes;
     }
-
 
 }

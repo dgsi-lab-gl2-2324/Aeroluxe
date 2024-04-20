@@ -66,7 +66,6 @@
           }
           ?>
 
-          <li><a class="nav-link scrollto" href="<?php echo URL . '/registro'?>">Registro</a></li>
           <li><a class="nav-link scrollto" href="<?php echo URL . '/admin'?>">Admin</a></li>
           <li><a class="nav-link scrollto" href="<?php echo URL . '/perfil'?>">Mi perfil</a></li>
 

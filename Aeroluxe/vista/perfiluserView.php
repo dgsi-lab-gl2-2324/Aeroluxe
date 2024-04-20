@@ -1,10 +1,13 @@
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="hero d-flex align-items-center">
-
+    <?php
+    $nombre = $datos['username'];
+    $usuario = $datos['usuario'];
+    ?>
     <div class="container">
         <div class="row">
             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                <h1 data-aos="fade-up">¡Bienvenido de nuevo, Usuario!</h1>
+                <h1 data-aos="fade-up">¡Bienvenido de nuevo, <?php echo $nombre ?>!</h1>
                 <h2 data-aos="fade-up" data-aos-delay="400">Aquí puedes ver y editar tu perfil</h2>
                 <div data-aos="fade-up" data-aos-delay="600">
                     <div class="text-center text-lg-start">
@@ -46,28 +49,28 @@
                     <div class="info-box">
                         <i class="bi bi-person"></i>
                         <h3>Nombre</h3>
-                        <p>Usuario</p>
+                        <p><?php echo $usuario -> getNombre()?> <?php echo $usuario -> getApellido1()?> <?php echo $usuario -> getApellido2()?></p>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="info-box">
                         <i class="bi bi-envelope"></i>
                         <h3>Correo Electrónico</h3>
-                        <p>usuario@example.com</p>
+                        <p><?php echo $usuario -> getEmail()?></p>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="info-box">
                         <i class="bi bi-telephone"></i>
                         <h3>Teléfono</h3>
-                        <p>+1 234 567 890</p>
+                        <p><?php echo $usuario -> getTelef()?></p>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="info-box">
                         <i class="bi bi-geo-alt"></i>
                         <h3>Dirección</h3>
-                        <p>Calle Principal, Ciudad, País</p>
+                        <p><?php echo $usuario -> getDireccion()?></p>
                     </div>
                 </div>
             </div>
@@ -88,39 +91,39 @@
         </header>
 
         <div class="container">
-    <div class="row justify-content-center align-items-center text-center gy-4">
-        <div class="col-lg-6">
-            <form action="forms/profile.php" method="post" class="php-email-form">
-                <div class="row gy-4">
-                    <div class="col-md-6">
-                        <input type="text" name="nombre" class="form-control" placeholder="Tu Nombre" required>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="text" class="form-control" name="apellido" placeholder="Tu Apellido" required>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="email" class="form-control" name="email" placeholder="Tu Correo Electrónico" required>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="text" class="form-control" name="telefono" placeholder="Tu Teléfono">
-                    </div>
-                    <div class="col-md-12">
-                        <textarea class="form-control" name="direccion" rows="6" placeholder="Tu Dirección"></textarea>
-                    </div>
-                    <div class="col-md-12 text-center">
-                        <div class="loading">Cargando</div>
-                        <div class="error-message"></div>
-                        <div class="sent-message">¡Tu perfil ha sido actualizado correctamente!</div>
-                        <button type="submit" class="btn btn-primary btn-lg">Guardar Cambios</button>
-                    </div>
+            <div class="row justify-content-center align-items-center text-center gy-4">
+                <div class="col-lg-6">
+                    <form action="<?php echo URL . '/actualizarperfil'; ?>" method="post" class="php-email-form">
+                        <div class="row gy-4">
+                            <div class="col-md-12">
+                                <input type="text" name="nombre" class="form-control" placeholder="Nombre" value=<?php echo $usuario -> getNombre()?> required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="apellido1" placeholder="Primer apellido" value=<?php echo $usuario -> getApellido1()?> required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="apellido2" placeholder="Segundo apellido" value=<?php echo $usuario -> getApellido2()?> required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" name="email" placeholder="Correo Electrónico" value=<?php echo $usuario -> getEmail()?> required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="telefono" placeholder="Teléfono" value=<?php echo $usuario -> getTelef()?> required>
+                            </div>
+                            <div class="col-md-12">
+                                <textarea class="form-control" name="direccion" rows="6" placeholder="Dirección" required><?php echo $usuario -> getDireccion()?></textarea>
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">Guardar Cambios</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-            </form>
+            </div>
         </div>
+
+
     </div>
-</div>
-
-
-        </div>
 
     </div>
 
