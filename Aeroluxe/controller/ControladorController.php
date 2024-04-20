@@ -86,7 +86,7 @@ class ControladorController extends ControladorBase
         $fotos = $this->fotos->dameTodasFotos();
         $tipos = $this->tipos->dameTipos();
 
-        $data['galeria'] = $fotos;
+        $data['fotos'] = $fotos;
         $data['tipos'] = $tipos;
 
         $data['mensaje'] = "";
@@ -102,8 +102,10 @@ class ControladorController extends ControladorBase
         $data['opcion'] = $opcion;
 
         $fotos = $this->fotos->dameTodasFotos();
+        $tipos = $this->tipos->dameTipos();
 
-        $data['galeria'] = $fotos;
+        $data['fotos'] = $fotos;
+        $data['tipos'] = $tipos;
 
         $data['mensaje'] = "";
 
@@ -122,7 +124,7 @@ class ControladorController extends ControladorBase
         $fotos = $this->fotos->dameTodasFotos();
         $tipos = $this->tipos->dameTipos();
 
-        $data['galeria'] = $fotos;
+        $data['fotos'] = $fotos;
         $data['tipos'] = $tipos;
         $data['mensaje'] = "";
 

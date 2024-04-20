@@ -9,6 +9,7 @@
 
             <?php
             $tipos = $datos['tipos'];
+            $fotos = $datos['fotos'];
 
             ?>
 
@@ -29,13 +30,13 @@
                                 <select class="form-control" name="photoType" required id="photoType">
                                     <option value="">Selecciona un tipo</option>
                                     <?php
-                                    
+
                                     if ($tipos) {
                                         foreach ($tipos as $tipo) {
 
 
                                     ?>
-                                            <option value="<?php echo $tipo->getId()?>"><?php echo $tipo->getTipo(); ?></option>
+                                            <option value="<?php echo $tipo->getId() ?>"><?php echo $tipo->getTipo(); ?></option>
 
                                     <?php
                                         }
@@ -78,9 +79,65 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
+
+
+            <section id="galeriaAdmin" class="portfolio">
+
+                <div class="container" data-aos="fade-up">
+
+                    <header class="section-header">
+                        <h2>Galería</h2>
+                    </header>
+
+                    <div class="row" data-aos="fade-up" data-aos-delay="100">
+                        <div class="col-lg-12 d-flex justify-content-center">
+                            <ul id="portfolio-flters">
+                                <li data-filter="*" class="filter-active">Todo</li>
+                                <?php
+                                if ($tipos) {
+                                    foreach ($tipos as $tipo) {
+                                ?>
+                                        <li data-filter=".filter-<?php echo $tipo->getId(); ?>"><?php echo $tipo->getTipo(); ?></option>
+                                    <?php
+                                    }
+                                }
+                                    ?>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+                        <?php
+
+                        if ($fotos) {
+                            foreach ($fotos as $foto) {
+                        ?>
+
+                                <div class="col-lg-4 col-md-6 portfolio-item filter-<?php echo $foto->getTipo(); ?>">
+                                    <div class="portfolio-wrap">
+                                        <!-- Asegúrate de que la imagen se codifique en base64 si getImagen retorna datos binarios -->
+                                        <img src="data:image/jpeg;base64,<?php echo base64_encode($foto->getImagen()) ?>" class="img-fluid" alt="">
+                                        <div class="portfolio-info">
+                                            <div class="portfolio-links">
+                                                <!-- Esto ya estaba correctamente codificado en base64 -->
+                                                <a href="data:image/jpeg;base64,<?php echo base64_encode($foto->getImagen()) ?>" data-gallery="portfolioGallery" class="portfokio-lightbox" title="<?php echo $foto->getTipo(); ?>"><i class="bi bi-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                        <?php
+                            }
+                        }
+
+                        ?>
+                    </div>
+                </div>
+            </section>
+
+
+
 
         </div>
 </section>
