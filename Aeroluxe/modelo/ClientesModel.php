@@ -121,7 +121,7 @@ class ClientesModel extends EntidadBase
     {
         $inserto = false;
 
-        $sql = "UPDATE TABLE $this->table (nombre,apellido1,apellido2,email,telefono,direccion) VALUES(:nombre, :ape1, :ape2,:email,:telefono, :direccion)  WHERE dni = :dni;";
+        $sql = "UPDATE $this->table SET nombre = :nombre, apellido1 = :ape1, apellido2 = :ape2, email = :email, telefono = :telefono, direccion = :direccion WHERE dni = :dni";
         $statement = $this->db->prepare($sql);
 
         $statement->bindParam(':nombre', $nombre, PDO::PARAM_STR);

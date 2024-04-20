@@ -83,7 +83,6 @@
           <?php
           }
           ?>
-
           <?php
           if (isset($_SESSION["USER_NOMBRE"]) && !empty($_SESSION["USER_NOMBRE"])) {
 
@@ -100,9 +99,10 @@
             }
 
             // Mostrar el mensaje con el nombre del usuario
-            echo "<strong>" . $saludo . ": " . $_SESSION["USER_NOMBRE"] . "</strong>";
+            echo "<strong>" . $saludo . ": " . "</strong>";
           }
           ?>
+          <li><a class="nav-link scrollto" href="<?php echo URL . '/perfil'?>"><?php echo "<strong>".$_SESSION["USER_NOMBRE"]."</strong>"; ?></a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
