@@ -59,7 +59,7 @@
           <div class="post-box">
             <div class="post-img"><img src="<?php echo URL ?>/assets/img/piscinaup.png" class="img-fluid" alt=""></div>
             <h3 class="post-title">Compra tu pase</h3>
-            <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Ver más</span><i class="bi bi-arrow-right"></i></a>
+            <a href="<?php echo URL . '/compra'?>" class="readmore stretched-link mt-auto"><span>Ver más</span><i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
 
@@ -514,7 +514,7 @@
                 <li class="na">Barra libre</li>
                 <li class="na">Suites</li>
               </ul>
-              <a href="#" class="btn-buy">Comprar</a>
+              <a href="<?php echo URL . '/compra'?>" class="btn-buy">Comprar</a>
             </div>
           </div>
 
@@ -533,7 +533,7 @@
                 <li class="na">Barra libre</li>
                 <li class="na">Suites</li>
               </ul>
-              <a href="#" class="btn-buy">Comprar</a>
+              <a href="<?php echo URL . '/compra'?>" class="btn-buy">Comprar</a>
             </div>
           </div>
 
@@ -551,7 +551,7 @@
                 <li class=>Barra libre</li>
                 <li class="na">Suites</li>
               </ul>
-              <a href="#" class="btn-buy">Comprar</a>
+              <a href="<?php echo URL . '/compra'?>" class="btn-buy">Comprar</a>
             </div>
           </div>
 
@@ -570,7 +570,7 @@
                 <li class=>Suites</li>
 
               </ul>
-              <a href="#" class="btn-buy">Comprar</a>
+              <a href="<?php echo URL . '/compra'?>" class="btn-buy">Comprar</a>
             </div>
           </div>
 
