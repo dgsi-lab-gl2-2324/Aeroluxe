@@ -19,7 +19,7 @@
             <form method="post" action="<?php echo URL . '/iniciasesion'; ?>">
 
                 <div class="form-group">
-                    <label for="inputName">dni</label>
+                    <label for="inputName">DNI</label>
                     <input type="text" name="dni" maxlength="10" required class="form-control" id="inputEmail4">
                 </div>
                 <div class="form-group">

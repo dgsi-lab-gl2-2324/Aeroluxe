@@ -32,6 +32,7 @@ class ControladorController extends ControladorBase
 
         $data['datosCli'] = "";
 
+
         $this->view("index", $data);
     }
 
