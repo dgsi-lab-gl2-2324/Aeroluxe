@@ -165,7 +165,8 @@ class ClientesModel extends EntidadBase
                     $row['email'],
                     $row['telefono'],
                     $row['clave'],
-                    $row['fecha_alta']
+                    $row['fecha_alta'],
+                    $row['direccion']
                 ));
             }
         }
