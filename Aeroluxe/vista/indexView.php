@@ -509,7 +509,7 @@
                 <li>Piscina principal</li>
                 <li>Aseo premium</li>
                 <li>Transporte aéreo</li>
-                <li class="na">Piscinas segundarias</li>
+                <li class="na">Piscinas secundarias</li>
                 <li class="na">Bufé libre</li>
                 <li class="na">Barra libre</li>
                 <li class="na">Suites</li>
@@ -528,7 +528,7 @@
                 <li>Piscina principal</li>
                 <li>Aseo premium</li>
                 <li>Transporte aéreo</li>
-                <li class=>Piscinas segundarias</li>
+                <li class=>Piscinas secundarias</li>
                 <li class="na">Bufé libre</li>
                 <li class="na">Barra libre</li>
                 <li class="na">Suites</li>
@@ -546,7 +546,7 @@
                 <li>Piscina principal</li>
                 <li>Aseo premium</li>
                 <li>Transporte aéreo</li>
-                <li class=>Piscinas segundarias</li>
+                <li class=>Piscinas secundarias</li>
                 <li class=>Bufé libre</li>
                 <li class=>Barra libre</li>
                 <li class="na">Suites</li>
@@ -564,11 +564,10 @@
                 <li>Piscina principal</li>
                 <li>Aseo premium</li>
                 <li>Transporte aéreo</li>
-                <li class=>Piscinas segundarias</li>
+                <li class=>Piscinas secundarias</li>
                 <li class=>Bufé libre</li>
                 <li class=>Barra libre</li>
                 <li class=>Suites</li>
-
               </ul>
               <a href="<?php echo URL . '/compra'?>" class="btn-buy">Comprar</a>
             </div>

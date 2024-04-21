@@ -15,7 +15,7 @@ RewriteRule ^cerrarsesion/?$ index.php?controller=Sesion&action=cerrarSesion [L]
 
     ##Compra de entradas
     RewriteRule ^compra/?$ index.php?controller=Sesion&action=compra [L]
-    RewriteRule ^compraentradas/?$ index.php?controller=Sesion&action=compraentradas [L]
+    RewriteRule ^procesarcompra/?$ index.php?controller=Sesion&action=procesarcompra [L]
 
 #Registro usuario
 RewriteRule ^registro/?$ index.php?controller=Sesion&action=registro [L]
