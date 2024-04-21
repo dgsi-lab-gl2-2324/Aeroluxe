@@ -10,7 +10,7 @@
             <div class="cliente-info">
                 <div class="form-group">
                     <label for="inputAddress">Tipo de entrada</label>
-                    <input type="text" name="direccion" maxlength="100" required class="form-control" readonly>
+                    <input type="text" name="tipo_entrada" maxlength="100" required class="form-control" readonly>
                 </div>
 
                 <div class="form-group">

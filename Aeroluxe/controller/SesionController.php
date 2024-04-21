@@ -302,6 +302,16 @@ class SesionController extends ControladorBase
     {
         $data = array();
 
+        if (
+            isset($_POST['tipo_entrada']) && isset($_POST['nombre']) &&
+            isset($_POST['email']) && isset($_POST['telefono'])
+        ) {
+            $tipoentrada = $_POST['tipo_entrada'];
+            $nombre = $_POST['nombre'];
+            $tlf = $_POST['telefono'];
+            $email = $_POST['email'];
+        }
+
         $this->view("ventarealizada", $data);
     }
 
