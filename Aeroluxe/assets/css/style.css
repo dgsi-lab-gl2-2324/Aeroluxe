@@ -38,27 +38,85 @@ h6 {
 }
 
 @keyframes shake {
-  0%, 100% {
+  0%, 20% {
     transform: translate(0, 0) rotate(0);
   }
-  10%, 30%, 50%, 70%, 90% {
-    transform: translate(-10px, 0) rotate(-20deg);
+  5% {
+    transform: translate(-5px, 0) rotate(-1deg);
   }
-  20%, 40%, 60%, 80% {
-    transform: translate(10px, 0) rotate(20deg);
+  10% {
+    transform: translate(5px, 0) rotate(1deg);
+  }
+  15% {
+    transform: translate(-5px, 0) rotate(-1deg);
+  }
+  20%, 100% {
+    transform: translate(0, 0) rotate(0);
   }
 }
 
+
+
 .shake-link {
     display: inline-block; /* Permite la transformación */
-    animation: shake 1s ease-in-out infinite;
+    animation: shake 2s ease-in-out infinite;
     animation-play-state: running;
-    animation-delay: 2s; /* Espera 2 segundos antes de empezar */
+    animation-delay: 1s; /* Espera 2 segundos antes de empezar */
 }
 
 .shake-link:hover {
     animation-play-state: paused; /* Opcional: pausa la animación al pasar el mouse */
 }
+
+
+.form-container {
+  width: 50%; /* Controla el ancho del formulario */
+  margin: 50px auto; /* Centra el formulario vertical y horizontalmente */
+  padding: 20px; /* Espacio interior alrededor del contenido */
+  position: relative;
+  border: 2px solid #007BFF; /* Borde azul, cambia el color según tus necesidades */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera para un efecto elevado */
+  background-color: #ffffff; /* Fondo blanco, opcional según tu diseño */
+}
+.btn-center {
+  display: block; /* Hace que el botón sea un bloque para permitir el centrado */
+  width: 50%; /* Ancho del botón respecto a su contenedor */
+  margin: 20px auto; /* Centra el botón horizontalmente y añade espacio superior */
+  padding: 10px 0; /* Espacio interior vertical para hacer el botón más grande */
+}
+
+
+
+.form-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, red, blue, deeppink, blue, red, blue, deeppink, blue);
+  background-size: 800%;
+  border-radius: 12px;
+  filter: blur(8px);
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.form-container:hover::before {
+  opacity: 1;
+  animation: glowing 20s linear infinite;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+
+
 
 
 /*--------------------------------------------------------------

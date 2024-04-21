@@ -81,6 +81,8 @@ class SesionController extends ControladorBase
 
                         $_SESSION["USER_NOMBRE"] = $nombre;
                         $_SESSION["USER_COD"] = $datosCli->getId();
+                        $_SESSION["USER_DNI"] = $datosCli->getDni();
+
                         $cargarvista = 'index';
                     } else {
                         $mens = "Usuario ya existente";
@@ -234,6 +236,9 @@ class SesionController extends ControladorBase
     {
         $_SESSION["USER_NOMBRE"] = '';
         $_SESSION['USER_COD'] = '';
+        $_SESSION["USER_DNI"] = '';
+        $_SESSION["IS_ADMIN"] = false;
+
 
         $data = array();
 
