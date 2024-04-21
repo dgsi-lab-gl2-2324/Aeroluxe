@@ -7,6 +7,7 @@
                 <h1 class="text-primary text-center">REGISTRAR NUEVO ADMINISTRADOR</h1>
 
             </div>
+            <div class="form-container">
 
             <form method="post" action="<?php echo URL . '/registraradmin'; ?>">
                 <div class="form-group">
@@ -27,9 +28,10 @@
                     <input type="password" name="contrasenaRep" maxlength="100" required class="form-control" id="inputPassword4">
                 </div>
 
-                <button type="submit" class="btn btn-primary btn-lg btn-block">Registrar</button>
+                <button type="submit" class="btn btn-primary btn-lg btn-block btn-center">Registrar</button>
 
             </form>
+            </div>
         </div>
     </div>
 </section>
