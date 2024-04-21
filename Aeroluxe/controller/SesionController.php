@@ -293,10 +293,10 @@ class SesionController extends ControladorBase
         $this->view("seleccionentradas", $data);
     }
 
-    public function compra()
+    public function compraentradas()
     {
         $data = array();
 
-        $this->view("seleccionentradas", $data);
+        $this->view("compraentradas", $data);
     }
 }

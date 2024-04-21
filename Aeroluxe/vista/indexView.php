@@ -1066,29 +1066,29 @@
               <div class="col-md-6">
                 <div class="info-box">
                   <i class="bi bi-geo-alt"></i>
-                  <h3>Address</h3>
-                  <p>A108 Adam Street,<br>New York, NY 535022</p>
+                  <h3>Dirección</h3>
+                  <p>Pl. de Emilio Alfaro, 8,<br>Zaragoza, Aragón, España</p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info-box">
                   <i class="bi bi-telephone"></i>
-                  <h3>Call Us</h3>
-                  <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
+                  <h3>Llámanos</h3>
+                  <p>925 72 10 10</p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info-box">
                   <i class="bi bi-envelope"></i>
-                  <h3>Email Us</h3>
-                  <p>info@example.com<br>contact@example.com</p>
+                  <h3>Envíanos un mail</h3>
+                  <p>aeroluxesresort@gmail.com</p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info-box">
                   <i class="bi bi-clock"></i>
-                  <h3>Open Hours</h3>
-                  <p>Monday - Friday<br>9:00AM - 05:00PM</p>
+                  <h3>Horario</h3>
+                  <p>Lunes - Domingo<br>00:00 - 00:00</p>
                 </div>
               </div>
             </div>
