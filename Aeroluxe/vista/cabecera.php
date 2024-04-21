@@ -49,39 +49,40 @@
         <span>AEROLUXE</span>
       </a>
 
+     
+
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto" href="#services">Servicios</a></li>
           <li><a class="nav-link scrollto" href="<?php echo URL . '/compra'?>">Compra de entradas</a></li>
           <?php
-          if (isset($_SESSION["USER_NOMBRE"]) && !empty($_SESSION["USER_NOMBRE"])) {
+          if (isset($_SESSION["IS_ADMIN"]) && ($_SESSION["IS_ADMIN"] == true)) {
           ?>
-            <li><a class="nav-link scrollto" href="<?php echo URL . '/cerrarsesion' ?>">Cerrar Sesión</a></li>
-
+            <li><a class="nav-link scrollto" href="<?php echo URL . '/admin' ?>">Admin</a></li>
           <?php
           } else {
           ?>
-            <li><a class="nav-link scrollto" href="<?php echo URL . '/iniciarSesion' ?>">Iniciar Sesión</a></li>
-
-          <?php
-          }
-          ?>
-
-          <li><a class="nav-link scrollto" href="<?php echo URL . '/admin'?>">Admin</a></li>
-          
-
-          <?php
-          if (isset($_SESSION["USER_NOMBRE"]) && !empty($_SESSION["USER_NOMBRE"])) {
-          } else {
-          ?>
-            <li><a class="nav-link scrollto" href="<?php echo URL . '/registro' ?>">Registro</a></li>
-
+            <li><a class="nav-link scrollto" href="<?php echo URL . '/perfil' ?>">Mi perfil</a></li>
           <?php
           }
           ?>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
-          <li><a>   </a></li>
+
+          <?php
+          if (isset($_SESSION["USER_NOMBRE"]) && !empty($_SESSION["USER_NOMBRE"])) {
+          ?>
+
+            <li><a class="getstarted scrollto" href="<?php echo URL . '/cerrarsesion' ?>">Cerrar Sesión</a></li>
+
+          <?php
+          } else {
+          ?>
+
+            <li><a class="getstarted scrollto" href="<?php echo URL . '/registro' ?>">¡Registrate!</a></li>
+
+          <?php
+          }
+          ?>
           <?php
           if (isset($_SESSION["USER_NOMBRE"]) && !empty($_SESSION["USER_NOMBRE"])) {
 
@@ -91,7 +92,7 @@
             // Determinar el mensaje según la hora del día
             if ($hora >= 6 && $hora < 12) {
               $saludo = "Buenos días";
-            } elseif ($hora >= 12 && $hora < 18) {
+            } elseif ($hora >= 12 && $hora < 20) {
               $saludo = "Buenas tardes";
             } else {
               $saludo = "Buenas noches";

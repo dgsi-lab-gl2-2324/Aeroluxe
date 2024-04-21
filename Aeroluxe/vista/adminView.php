@@ -1,5 +1,7 @@
 <main id="main">
-
+<?php
+ $mensaje = $datos['mensaje'];
+?>
   <!-- ======= Breadcrumbs ======= -->
   <section class="breadcrumbs">
     <div class="container">
@@ -23,6 +25,9 @@
 
 
                 <?php
+                if ($mensaje != null) {
+                  echo $mensaje;
+                }
                 $opcion = $datos['opcion'];
                 if ($opcion != null) {
                   if ($opcion == "admin") {
@@ -30,7 +35,7 @@
                   } else if ($opcion == "clientes") {
                     require_once 'mostrarClientesView.php';
                   } else if ($opcion == "galeria") {
-                    require_once 'mostrarGaleriaView.php';
+                    require_once 'editarGaleriaView.php';
                   }
                 } else {
                   echo '<h3>Hola administrador, desde aquí puedes gestionar tu página.</h3>';
