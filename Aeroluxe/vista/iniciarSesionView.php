@@ -10,26 +10,28 @@
                 $mensaje = $datos['mensaje'];
                 if ($mensaje != null) {
                     echo $mensaje;
-                }   
+                }
                 ?>
 
             </div>
 
+            <div class="form-container">
 
-            <form method="post" action="<?php echo URL . '/iniciasesion'; ?>">
+                <form method="post" action="<?php echo URL . '/iniciasesion'; ?>">
 
-                <div class="form-group">
-                    <label for="inputName">DNI</label>
-                    <input type="text" name="dni" maxlength="10" required class="form-control" id="inputEmail4">
-                </div>
-                <div class="form-group">
-                    <label for="inputPassword4">Contraseña</label>
-                    <input type="password" name="contrasena" maxlength="100" required class="form-control" id="inputPassword4">
-                </div>
+                    <div class="form-group">
+                        <label for="inputName">DNI</label>
+                        <input type="text" name="dni" maxlength="10" required class="form-control" id="inputEmail4">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword4">Contraseña</label>
+                        <input type="password" name="contrasena" maxlength="100" required class="form-control" id="inputPassword4">
+                    </div>
 
-                <button type="submit" class="btn btn-primary btn-lg btn-block">Registrarse</button>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block btn-center">Iniciar Sesión</button>
 
-            </form>
+                </form>
+            </div>
         </div>
     </div>
 </section>

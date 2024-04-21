@@ -49,10 +49,41 @@
         <span>AEROLUXE</span>
       </a>
 
-     
+
 
       <nav id="navbar" class="navbar">
         <ul>
+
+        <?php
+          if (isset($_SESSION["USER_NOMBRE"]) && !empty($_SESSION["USER_NOMBRE"])) {
+
+            // Obtener la hora actual del servidor
+            $hora = date("H");
+
+            // Determinar el mensaje según la hora del día
+            if ($hora >= 6 && $hora < 12) {
+              $saludo = "Buenos días";
+            } elseif ($hora >= 12 && $hora < 20) {
+              $saludo = "Buenas tardes";
+            } else {
+              $saludo = "Buenas noches";
+            }
+
+            // Mostrar el mensaje con el nombre del usuario
+            if (isset($_SESSION["IS_ADMIN"]) && ($_SESSION["IS_ADMIN"] == true)) {
+            ?>
+              <li><a class="nav-link scrollto" href="<?php echo URL . '/admin' ?>"><?php echo "<strong>". $saludo ." ". $_SESSION["USER_NOMBRE"] . "</strong>"; ?></a></li>
+
+          <?php
+            } else {
+          ?>
+            <li><a class="nav-link scrollto" href="<?php echo URL . '/perfil' ?>"><?php echo "<strong>". $saludo ." " . $_SESSION["USER_NOMBRE"] . "</strong>"; ?></a></li>
+          <?php
+            }
+          }
+          ?>
+
+
           <li><a class="nav-link scrollto" href="#services">Servicios</a></li>
 
           <?php
@@ -60,7 +91,7 @@
           ?>
             <li><a class="nav-link scrollto" href="<?php echo URL . '/admin' ?>">Admin</a></li>
           <?php
-          } else {
+          } else if (isset($_SESSION["USER_NOMBRE"]) && !empty($_SESSION["USER_NOMBRE"])) {
           ?>
             <li><a class="nav-link scrollto" href="<?php echo URL . '/perfil' ?>">Mi perfil</a></li>
           <?php
@@ -83,26 +114,7 @@
           <?php
           }
           ?>
-          <?php
-          if (isset($_SESSION["USER_NOMBRE"]) && !empty($_SESSION["USER_NOMBRE"])) {
-
-            // Obtener la hora actual del servidor
-            $hora = date("H");
-
-            // Determinar el mensaje según la hora del día
-            if ($hora >= 6 && $hora < 12) {
-              $saludo = "Buenos días";
-            } elseif ($hora >= 12 && $hora < 20) {
-              $saludo = "Buenas tardes";
-            } else {
-              $saludo = "Buenas noches";
-            }
-
-            // Mostrar el mensaje con el nombre del usuario
-            echo "<strong>" . $saludo . ": " . "</strong>";
-          }
-          ?>
-          <li><a class="nav-link scrollto" href="<?php echo URL . '/perfil'?>"><?php echo "<strong>".$_SESSION["USER_NOMBRE"]."</strong>"; ?></a></li>
+         
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

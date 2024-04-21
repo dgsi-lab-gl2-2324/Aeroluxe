@@ -92,37 +92,38 @@
 
         <div class="container">
             <div class="row justify-content-center align-items-center text-center gy-4">
-                <div class="col-lg-6">
-                    <form action="<?php echo URL . '/actualizarperfil'; ?>" method="post" class="php-email-form">
-                        <div class="row gy-4">
-                            <div class="col-md-12">
-                                <input type="text" name="nombre" class="form-control" placeholder="Nombre" value=<?php echo $usuario->getNombre() ?> required>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" name="apellido1" placeholder="Primer apellido" value=<?php echo $usuario->getApellido1() ?> required>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" name="apellido2" placeholder="Segundo apellido" value=<?php echo $usuario->getApellido2() ?> required>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="email" class="form-control" name="email" placeholder="Correo Electrónico" value=<?php echo $usuario->getEmail() ?> required>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" name="telefono" placeholder="Teléfono" value=<?php echo $usuario->getTelef() ?> required>
-                            </div>
-                            <div class="col-md-12">
-                                <textarea class="form-control" name="direccion" rows="6" placeholder="Dirección" required><?php echo $usuario->getDireccion() ?></textarea>
-                            </div>
-                            <div class="col-md-12 text-center">
-                                <button type="submit" class="btn btn-primary btn-lg">Guardar Cambios</button>
-                            </div>
-                            <?php if (isset($data['mensaje'])) : ?>
-                                <div class="alert alert-<?php echo ($inserto ? 'success' : 'danger'); ?>" role="alert">
-                                    <?php echo $data['mensaje']; ?>
+                    <div class="form-container">
+
+                        <form action="<?php echo URL . '/actualizarperfil'; ?>" method="post" class="php-email-form">
+                            <div class="row gy-4">
+                                <div class="col-md-12">
+                                    <input type="text" name="nombre" class="form-control" placeholder="Nombre" value=<?php echo $usuario->getNombre() ?> required>
                                 </div>
-                            <?php endif; ?>
-                        </div>
-                    </form>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" name="apellido1" placeholder="Primer apellido" value=<?php echo $usuario->getApellido1() ?> required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" name="apellido2" placeholder="Segundo apellido" value=<?php echo $usuario->getApellido2() ?> required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" name="email" placeholder="Correo Electrónico" value=<?php echo $usuario->getEmail() ?> required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" name="telefono" placeholder="Teléfono" value=<?php echo $usuario->getTelef() ?> required>
+                                </div>
+                                <div class="col-md-12">
+                                    <textarea class="form-control" name="direccion" rows="6" placeholder="Dirección" required><?php echo $usuario->getDireccion() ?></textarea>
+                                </div>
+                                <div class="col-md-12 text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg">Guardar Cambios</button>
+                                </div>
+                                <?php if (isset($data['mensaje'])) : ?>
+                                    <div class="alert alert-<?php echo ($inserto ? 'success' : 'danger'); ?>" role="alert">
+                                        <?php echo $data['mensaje']; ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        </form>
                 </div>
             </div>
         </div>
