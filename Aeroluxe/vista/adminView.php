@@ -36,6 +36,8 @@
                     require_once 'mostrarClientesView.php';
                   } else if ($opcion == "galeria") {
                     require_once 'editarGaleriaView.php';
+                  } else if ($opcion == "mantenimiento") {
+                    require_once 'mantenimientoView.php';
                   }
                 } else {
                   echo '<h3>Hola administrador, desde aquí puedes gestionar tu página.</h3>';
@@ -66,6 +68,7 @@
                 <li><a href="<?php echo URL . '/menuAdminAdmin' ?>">Añadir administrador</a></li>
                 <li><a href="<?php echo URL . '/menuAdminClientes' ?>">Clientes</a></li>
                 <li><a href="<?php echo URL . '/menuAdminGaleria' ?>">Galería</a></li>
+                <li><a href="<?php echo URL . '/menuAdminMantenimiento' ?>">Mantenimiento</a></li>
               </ul>
             </div><!-- End sidebar categories-->
 
