@@ -27,47 +27,47 @@
 
 
 
-  <!-- ======= Joinus Section ======= -->
-  <section id="inicio-sesion-section" class="inicio-sesion-section">
+    <!-- ======= Joinus Section ======= -->
+    <section id="inicio-sesion-section" class="inicio-sesion-section">
 
-    <div class="container" data-aos="fade-up">
+      <div class="container" data-aos="fade-up">
 
-      <header class="section-header">
-        <h2>Únete</h2>
-        <p>Obtén tu pase al paraíso</p>
-      </header>
+        <header class="section-header">
+          <h2>Únete</h2>
+          <p>Obtén tu pase al paraíso</p>
+        </header>
 
-      <div class="row">
+        <div class="row">
 
-        <div class="col-lg-4">
-          <div class="post-box">
-            <div class="post-img"><img src="<?php echo URL ?>/assets/img/piscinaup.png" class="img-fluid" alt=""></div>
-            <h3 class="post-title">Crea tu cuenta</h3>
-            <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Ver más</span><i class="bi bi-arrow-right"></i></a>
+          <div class="col-lg-4">
+            <div class="post-box">
+              <div class="post-img"><img src="<?php echo URL ?>/assets/img/piscinaup.png" class="img-fluid" alt=""></div>
+              <h3 class="post-title">Crea tu cuenta</h3>
+              <a href="<?php echo URL . '/registro' ?>" class="readmore stretched-link mt-auto"><span>Ver más</span><i class="bi bi-arrow-right"></i></a>
+            </div>
           </div>
-        </div>
 
-        <div class="col-lg-4">
-          <div class="post-box">
-            <div class="post-img"><img src="<?php echo URL ?>/assets/img/piscinaup.png" class="img-fluid" alt=""></div>
-            <h3 class="post-title">Inicia sesión</h3>
-            <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Ver más</span><i class="bi bi-arrow-right"></i></a>
+          <div class="col-lg-4">
+            <div class="post-box">
+              <div class="post-img"><img src="<?php echo URL ?>/assets/img/piscinaup.png" class="img-fluid" alt=""></div>
+              <h3 class="post-title">Inicia sesión</h3>
+              <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Ver más</span><i class="bi bi-arrow-right"></i></a>
+            </div>
           </div>
-        </div>
 
-        <div class="col-lg-4">
-          <div class="post-box">
-            <div class="post-img"><img src="<?php echo URL ?>/assets/img/piscinaup.png" class="img-fluid" alt=""></div>
-            <h3 class="post-title">Compra tu pase</h3>
-            <a href="<?php echo URL . '/compra'?>" class="readmore stretched-link mt-auto"><span>Ver más</span><i class="bi bi-arrow-right"></i></a>
+          <div class="col-lg-4">
+            <div class="post-box">
+              <div class="post-img"><img src="<?php echo URL ?>/assets/img/piscinaup.png" class="img-fluid" alt=""></div>
+              <h3 class="post-title">Compra tu pase</h3>
+              <a href="<?php echo URL . '/compra' ?>" class="readmore stretched-link mt-auto"><span>Ver más</span><i class="bi bi-arrow-right"></i></a>
+            </div>
           </div>
+
         </div>
 
       </div>
 
-    </div>
-
-  </section><!-- End Join Us Section -->
+    </section><!-- End Join Us Section -->
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
@@ -77,9 +77,9 @@
 
           <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
             <div class="content">
-            <h3>¿Quiénes somos?</h3>
+              <h3>¿Quiénes somos?</h3>
               <h2>
-                En Aeroluxe, superamos los límites de la innovación y la sostenibilidad, ofreciendo a nuestros clientes experiencias únicas de ocio y relajación en instalaciones flotantes de alta tecnología. 
+                En Aeroluxe, superamos los límites de la innovación y la sostenibilidad, ofreciendo a nuestros clientes experiencias únicas de ocio y relajación en instalaciones flotantes de alta tecnología.
               </h2>
               <p>
                 Fundada por visionarios, destaca por su diseño exclusivo que incluye piscinas, zonas de restauración y áreas de descanso, todas suspendidas en el aire.
@@ -206,67 +206,6 @@
 
       <div class="container" data-aos="fade-up">
 
-        <header class="section-header">
-          <h2>Features</h2>
-          <p>Laboriosam et omnis fuga quis dolor direda fara</p>
-        </header>
-
-        <div class="row">
-
-          <div class="col-lg-6">
-            <img src="<?php echo URL ?>/assets/img/features.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
-            <div class="row align-self-center gy-4">
-
-              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3>Eos aspernatur rem</h3>
-                </div>
-              </div>
-
-              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3>Facilis neque ipsa</h3>
-                </div>
-              </div>
-
-              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3>Volup amet voluptas</h3>
-                </div>
-              </div>
-
-              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3>Rerum omnis sint</h3>
-                </div>
-              </div>
-
-              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3>Alias possimus</h3>
-                </div>
-              </div>
-
-              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
-                <div class="feature-box d-flex align-items-center">
-                  <i class="bi bi-check"></i>
-                  <h3>Repellendus mollitia</h3>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </div> <!-- / row -->
-
         <!-- Feature Tabs -->
         <div class="row feture-tabs" data-aos="fade-up">
           <div class="col-lg-6">
@@ -289,14 +228,14 @@
 
               <div class="tab-pane fade show active" id="tab1">
                 <p>
-                  Nos dedicamos a la búsqueda continua de avances tecnológicos que impulsan nuestros resorts flotantes. 
+                  Nos dedicamos a la búsqueda continua de avances tecnológicos que impulsan nuestros resorts flotantes.
                 </p>
                 <div class="d-flex align-items-center mb-2">
                   <i class="bi bi-check2"></i>
                   <h4>Tecnologías</h4>
                 </div>
                 <p>
-                  Desde la tecnología de levitación magnética que soporta nuestras instalaciones, hasta sistemas automatizados para la gestión del complejo, la innovación está en el corazón de todo lo que hacemos. 
+                  Desde la tecnología de levitación magnética que soporta nuestras instalaciones, hasta sistemas automatizados para la gestión del complejo, la innovación está en el corazón de todo lo que hacemos.
                 </p>
                 <div class="d-flex align-items-center mb-2">
                   <i class="bi bi-check2"></i>
@@ -309,14 +248,14 @@
 
               <div class="tab-pane fade show" id="tab2">
                 <p>
-                  Cada visita a Aeroluxe es una aventura donde el lujo se encuentra con la fantasía. 
+                  Cada visita a Aeroluxe es una aventura donde el lujo se encuentra con la fantasía.
                 </p>
                 <div class="d-flex align-items-center mb-2">
                   <i class="bi bi-check2"></i>
                   <h4>Detalles</h4>
                 </div>
                 <p>
-                  Nuestra atención al detalle y el deseo de superar las expectativas se reflejan en la calidad inigualable del servicio, las impresionantes instalaciones flotantes y las exclusivas experiencias de entretenimiento. 
+                  Nuestra atención al detalle y el deseo de superar las expectativas se reflejan en la calidad inigualable del servicio, las impresionantes instalaciones flotantes y las exclusivas experiencias de entretenimiento.
                 </p>
                 <div class="d-flex align-items-center mb-2">
                   <i class="bi bi-check2"></i>
@@ -344,74 +283,6 @@
 
         </div><!-- End Feature Tabs -->
 
-        <!-- Feature Icons -->
-        <div class="row feature-icons" data-aos="fade-up">
-          <h3>Ratione mollitia eos ab laudantium rerum beatae quo</h3>
-
-          <div class="row">
-
-            <div class="col-xl-4 text-center" data-aos="fade-right" data-aos-delay="100">
-              <img src="<?php echo URL ?>/assets/img/features-3.png" class="img-fluid p-4" alt="">
-            </div>
-
-            <div class="col-xl-8 d-flex content">
-              <div class="row align-self-center gy-4">
-
-                <div class="col-md-6 icon-box" data-aos="fade-up">
-                  <i class="ri-line-chart-line"></i>
-                  <div>
-                    <h4>Corporis voluptates sit</h4>
-                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                  <i class="ri-stack-line"></i>
-                  <div>
-                    <h4>Ullamco laboris nisi</h4>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                  <i class="ri-brush-4-line"></i>
-                  <div>
-                    <h4>Labore consequatur</h4>
-                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                  <i class="ri-magic-line"></i>
-                  <div>
-                    <h4>Beatae veritatis</h4>
-                    <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                  <i class="ri-command-line"></i>
-                  <div>
-                    <h4>Molestiae dolor</h4>
-                    <p>Et fuga et deserunt et enim. Dolorem architecto ratione tensa raptor marte</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-                  <i class="ri-radar-line"></i>
-                  <div>
-                    <h4>Explicabo consectetur</h4>
-                    <p>Est autem dicta beatae suscipit. Sint veritatis et sit quasi ab aut inventore</p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-
-        </div><!-- End Feature Icons -->
-
       </div>
 
     </section><!-- End Features Section -->
@@ -423,7 +294,7 @@
 
         <header class="section-header">
           <h2>Servicios</h2>
-          <p>Veritatis et dolores facere numquam et praesentium</p>
+          <p>Oferta de Aeroluxe</p>
         </header>
 
         <div class="row gy-4">
@@ -433,7 +304,7 @@
               <i class="ri-discuss-line icon"></i>
               <h3>Experiencias de Ocio Flotantes</h3>
               <p>Aeroluxe redefine el lujo con sus exclusivas instalaciones flotantes. Disfruta de nuestra piscina suspendida, zonas de restauración flotantes y áreas de baño, todas equipadas con tecnología de levitación magnética para una sensación única de estar entre las nubes.</p>
-              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+              <a href="#" class="read-more"><span>Ver más</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
 
@@ -442,7 +313,7 @@
               <i class="ri-discuss-line icon"></i>
               <h3>Transporte Aéreo Privado</h3>
               <p>Accede a nuestras instalaciones a través de un elegante servicio de transporte aéreo. Con nuestra flota de vehículos de transporte exclusivos, garantizamos una llegada y salida fluidas y memorables, asegurando privacidad y confort desde el momento en que decides visitarnos.</p>
-              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+              <a href="#" class="read-more"><span>Ver más</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
 
@@ -451,7 +322,7 @@
               <i class="ri-discuss-line icon"></i>
               <h3>Sistemas de Información Automatizados</h3>
               <p>Desde la reserva hasta el servicio posvisita, nuestros sistemas automatizados de gestión garantizan una experiencia sin esfuerzo y personalizada. Con nuestro avanzado sistema de reservas y atención al cliente, cada detalle de tu visita se atiende con precisión y cuidado.</p>
-              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+              <a href="#" class="read-more"><span>Ver más</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
 
@@ -460,7 +331,7 @@
               <i class="ri-discuss-line icon"></i>
               <h3>Seguridad Avanzada y Mantenimiento</h3>
               <p>Tu seguridad y comodidad son nuestra prioridad. Con nuestro avanzado sistema de seguridad y un equipo de mantenimiento de respuesta rápida, aseguramos un entorno seguro y bien conservado en todo momento, permitiéndote disfrutar de tu estancia sin preocupaciones.</p>
-              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+              <a href="#" class="read-more"><span>Ver más</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
 
@@ -469,7 +340,7 @@
               <i class="ri-discuss-line icon"></i>
               <h3>Desarrollo e Innovación Continuos (I+D)</h3>
               <p>Nuestro compromiso con la innovación se refleja en la constante evolución de nuestras ofertas. Con inversiones significativas en I+D, exploramos y desarrollamos las últimas tecnologías para mejorar continuamente tu experiencia en Aeroluxe.</p>
-              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+              <a href="#" class="read-more"><span>Ver más</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
 
@@ -478,7 +349,7 @@
               <i class="ri-discuss-line icon"></i>
               <h3>Fidelización y Servicios Personalizados</h3>
               <p>Ofrecemos programas de fidelización diseñados para premiar a nuestros visitantes recurrentes con servicios personalizados, mejoras en la estancia y ofertas exclusivas, asegurando que cada visita sea tan refrescante como la primera.</p>
-              <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+              <a href="#" class="read-more"><span>Ver más</span> <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
 
@@ -494,8 +365,8 @@
       <div class="container" data-aos="fade-up">
 
         <header class="section-header">
-          <h2>Pricing</h2>
-          <p>Check our Pricing</p>
+          <h2>Precios</h2>
+          <p>Elige tu experiencia</p>
         </header>
 
         <div class="row gy-4" data-aos="fade-left">
@@ -514,7 +385,7 @@
                 <li class="na">Barra libre</li>
                 <li class="na">Suites</li>
               </ul>
-              <a href="<?php echo URL . '/compra'?>" class="btn-buy">Comprar</a>
+              <a href="<?php echo URL . '/compra' ?>" class="btn-buy">Comprar</a>
             </div>
           </div>
 
@@ -533,7 +404,7 @@
                 <li class="na">Barra libre</li>
                 <li class="na">Suites</li>
               </ul>
-              <a href="<?php echo URL . '/compra'?>" class="btn-buy">Comprar</a>
+              <a href="<?php echo URL . '/compra' ?>" class="btn-buy">Comprar</a>
             </div>
           </div>
 
@@ -551,7 +422,7 @@
                 <li class=>Barra libre</li>
                 <li class="na">Suites</li>
               </ul>
-              <a href="<?php echo URL . '/compra'?>" class="btn-buy">Comprar</a>
+              <a href="<?php echo URL . '/compra' ?>" class="btn-buy">Comprar</a>
             </div>
           </div>
 
@@ -569,7 +440,7 @@
                 <li class=>Barra libre</li>
                 <li class=>Suites</li>
               </ul>
-              <a href="<?php echo URL . '/compra'?>" class="btn-buy">Comprar</a>
+              <a href="<?php echo URL . '/compra' ?>" class="btn-buy">Comprar</a>
             </div>
           </div>
 
@@ -586,7 +457,7 @@
 
         <header class="section-header">
           <h2>F.A.Q</h2>
-          <p>Frequently Asked Questions</p>
+          <p>Preguntas frecuentes</p>
         </header>
 
         <div class="row">
@@ -596,12 +467,12 @@
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
-                    Non consectetur a erat nam at lectus urna duis?
+                    ¿Cómo puedo reservar una estancia en Aeroluxe?
                   </button>
                 </h2>
                 <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
                   <div class="accordion-body">
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                    Puede reservar su estancia a través de nuestra aplicación móvil o sitio web, donde encontrará una interfaz de usuario fácil de usar que le guiará a través del proceso de reserva. También puede llamar a nuestro equipo de atención al cliente, que estará encantado de ayudarle con sus planes de viaje y reservas personalizadas.
                   </div>
                 </div>
               </div>
@@ -609,12 +480,12 @@
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
-                    Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+                    ¿Qué incluye el transporte aéreo exclusivo de Aeroluxe?
                   </button>
                 </h2>
                 <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
                   <div class="accordion-body">
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                    Nuestro servicio de transporte aéreo proporciona traslados privados desde y hacia nuestras instalaciones flotantes. Esto incluye un servicio de lujo que garantiza su confort y privacidad, con impresionantes vistas y una experiencia sin igual que comienza desde el momento en que despega hacia Aeroluxe.
                   </div>
                 </div>
               </div>
@@ -622,12 +493,12 @@
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?
+                    ¿Qué medidas de sostenibilidad practica Aeroluxe?
                   </button>
                 </h2>
                 <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
                   <div class="accordion-body">
-                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                    En Aeroluxe, estamos comprometidos con la protección del medio ambiente. Nuestras medidas de sostenibilidad incluyen la utilización de energías renovables, la implementación de sistemas de gestión de residuos y agua, la construcción sostenible de nuestras instalaciones y programas de educación y concienciación para huéspedes y personal.
                   </div>
                 </div>
               </div>
@@ -643,12 +514,12 @@
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-1">
-                    Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
+                    ¿Qué opciones de comida y bebida están disponibles?
                   </button>
                 </h2>
                 <div id="faq2-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
                   <div class="accordion-body">
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                    Ofrecemos una amplia gama de opciones gastronómicas, desde comidas ligeras hasta cenas gourmet, todas preparadas por chefs de renombre y con ingredientes de la más alta calidad. Nuestros menús están diseñados para atender diversas dietas y preferencias, incluyendo opciones vegetarianas, veganas y sin gluten.
                   </div>
                 </div>
               </div>
@@ -656,12 +527,12 @@
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-2">
-                    Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
+                    ¿Pueden alojar eventos especiales o grupos grandes?
                   </button>
                 </h2>
                 <div id="faq2-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
                   <div class="accordion-body">
-                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+                    Absolutamente. Aeroluxe es el lugar perfecto para eventos especiales, conferencias o reuniones de grupo. Nuestro equipo de planificación de eventos está disponible para ayudarle a personalizar su experiencia y asegurarse de que su evento sea tan extraordinario como nuestras instalaciones.
                   </div>
                 </div>
               </div>
@@ -669,12 +540,12 @@
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-3">
-                    Varius vel pharetra vel turpis nunc eget lorem dolor?
+                    ¿Qué nivel de seguridad y privacidad puedo esperar en Aeroluxe?
                   </button>
                 </h2>
                 <div id="faq2-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
                   <div class="accordion-body">
-                    Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
+                    La seguridad y privacidad de nuestros huéspedes son nuestra máxima prioridad. Contamos con sistemas de seguridad de última generación, personal de seguridad altamente entrenado y protocolos de privacidad para garantizar que su estancia sea segura y confidencial. Además, nuestras instalaciones están diseñadas para proporcionar un refugio seguro y tranquilo, lejos del bullicio del mundo exterior.
                   </div>
                 </div>
               </div>
@@ -831,8 +702,8 @@
       <div class="container" data-aos="fade-up">
 
         <header class="section-header">
-          <h2>Testimonials</h2>
-          <p>What they are saying about us</p>
+          <h2>Valoraciones</h2>
+          <p>¿Qué opinan nuestros clientes?</p>
         </header>
 
         <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200">
@@ -844,7 +715,7 @@
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  Desde el momento en que el transporte aéreo exclusivo de Aeroluxe nos llevó a nuestro destino flotante, supe que esta experiencia sería inolvidable. La piscina levitante era algo sacado de un sueño, con vistas panorámicas del paisaje circundante. Cada solicitud fue atendida con una sonrisa y una eficiencia impresionante. ¡Definitivamente volveré!
                 </p>
                 <div class="profile mt-auto">
                   <img src="<?php echo URL ?>/assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
@@ -860,7 +731,7 @@
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  Aeroluxe nos transportó a una dimensión donde la innovación y el lujo se encuentran. La tecnología puntera y las prácticas sostenibles que observamos fueron tan impresionantes como las instalaciones. Se nota la dedicación en cada detalle, desde el diseño hasta el servicio. Es más que un resort, es una experiencia transformadora.
                 </p>
                 <div class="profile mt-auto">
                   <img src="<?php echo URL ?>/assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
@@ -873,10 +744,10 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
                 </div>
                 <p>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  Elegí Aeroluxe por su compromiso con la sostenibilidad y me complace decir que superaron mis expectativas. La energía renovable, los programas de reciclaje y la construcción consciente del medio ambiente me hicieron sentir que estaba invirtiendo en un futuro más verde. Solo me hubiera gustado que el proceso de reserva fuera un poco más intuitivo, pero eso no empañó la magia de mi estancia.
                 </p>
                 <div class="profile mt-auto">
                   <img src="<?php echo URL ?>/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
@@ -892,7 +763,7 @@
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  La atención al cliente en Aeroluxe es tan impresionante como sus vistas. Me encantó cómo personalizaron mi estancia, desde recomendaciones gastronómicas hasta actividades de ocio, todo estaba adaptado a mis gustos. Es como si conocieran mis deseos antes incluso de que los expresara. Definitivamente, han elevado el estándar del servicio de hospitalidad.
                 </p>
                 <div class="profile mt-auto">
                   <img src="<?php echo URL ?>/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
@@ -908,7 +779,7 @@
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  Como entusiasta de la tecnología, me fascinó con el sistema automatizado y la interfaz de usuario que ofrece Aeroluxe. La aplicación fue una herramienta indispensable que hizo que mi estancia fuera cómoda y eficiente. Además, ver la tecnología de levitación en acción fue simplemente asombroso. ¡Futurista y lujoso al mismo tiempo!
                 </p>
                 <div class="profile mt-auto">
                   <img src="<?php echo URL ?>/assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
@@ -932,32 +803,13 @@
       <div class="container" data-aos="fade-up">
 
         <header class="section-header">
-          <h2>Team</h2>
-          <p>Our hard working team</p>
+          <h2>Equipo</h2>
+          <p>Nuestro equipo</p>
         </header>
 
         <div class="row gy-4">
 
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="member">
-              <div class="member-img">
-                <img src="<?php echo URL ?>/assets/img/team/team-1.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-                <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
               <div class="member-img">
                 <img src="<?php echo URL ?>/assets/img/team/team-2.jpg" class="img-fluid" alt="">
@@ -969,9 +821,26 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-                <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>
+                <h4>Denisa</h4>
+                <span>Scrum Master</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <div class="member-img">
+                <img src="<?php echo URL ?>/assets/img/team/team-4.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Sara</h4>
+                <span>Product Owner</span>
               </div>
             </div>
           </div>
@@ -988,9 +857,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-                <p>Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt. Voluptates enim aut architecto porro aspernatur molestiae modi.</p>
+                <h4>Alonso</h4>
+                <span>Desarollador</span>
               </div>
             </div>
           </div>
@@ -998,7 +866,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
             <div class="member">
               <div class="member-img">
-                <img src="<?php echo URL ?>/assets/img/team/team-4.jpg" class="img-fluid" alt="">
+                <img src="<?php echo URL ?>/assets/img/team/team-1.jpg" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -1007,9 +875,8 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-                <p>Rerum voluptate non adipisci animi distinctio et deserunt amet voluptas. Quia aut aliquid doloremque ut possimus ipsum officia.</p>
+                <h4>Héctor</h4>
+                <span>Desarrollador</span>
               </div>
             </div>
           </div>
@@ -1026,8 +893,8 @@
       <div class="container" data-aos="fade-up">
 
         <header class="section-header">
-          <h2>Our Clients</h2>
-          <p>Temporibus omnis officia</p>
+          <h2>Apoyos</h2>
+          <p>Nuestros clientes</p>
         </header>
 
         <div class="clients-slider swiper">
@@ -1053,8 +920,8 @@
       <div class="container" data-aos="fade-up">
 
         <header class="section-header">
-          <h2>Contact</h2>
-          <p>Contact Us</p>
+          <h2>Contacto</h2>
+          <p>Contacta con nosotros</p>
         </header>
 
         <div class="row gy-4">
@@ -1066,7 +933,7 @@
                 <div class="info-box">
                   <i class="bi bi-geo-alt"></i>
                   <h3>Dirección</h3>
-                  <p>Pl. de Emilio Alfaro, 8,<br>Zaragoza, Aragón, España</p>
+                  <p>Pl. de Emilio Alfaro, 8<br>Zaragoza, Aragón, España</p>
                 </div>
               </div>
               <div class="col-md-6">
@@ -1099,27 +966,27 @@
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                  <input type="text" name="name" class="form-control" placeholder="Nombre" required>
                 </div>
 
                 <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                  <input type="email" class="form-control" name="email" placeholder="Email" required>
                 </div>
 
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                  <input type="text" class="form-control" name="subject" placeholder="Asunto" required>
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                  <textarea class="form-control" name="message" rows="6" placeholder="Mensaje" required></textarea>
                 </div>
 
                 <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
+                  <div class="loading">Espere</div>
                   <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <div class="sent-message">Mensaje enviado con éxito</div>
 
-                  <button type="submit">Send Message</button>
+                  <button type="submit">Enviar</button>
                 </div>
 
               </div>
@@ -1134,5 +1001,3 @@
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
-
-  
