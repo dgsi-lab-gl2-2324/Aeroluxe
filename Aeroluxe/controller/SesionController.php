@@ -16,6 +16,11 @@ class SesionController extends ControladorBase
     public $admin;
 
     /**
+     * @var EntradaModel
+     */
+    public $entrada;
+
+    /**
      * SesionController constructor.
      */
     public function __construct()
@@ -23,6 +28,7 @@ class SesionController extends ControladorBase
         parent::__construct();
         $this->cliente = new ClientesModel();
         $this->admin = new AdminModel();
+        $this->entrada = new EntradaModel();
     }
 
     public function registro()
@@ -310,9 +316,12 @@ class SesionController extends ControladorBase
             $nombre = $_POST['nombre'];
             $tlf = $_POST['telefono'];
             $email = $_POST['email'];
+
+            $inserto = $this->entrada->insertarEntrada($_SESSION["USER_COD"], $tipoentrada, $nombre, $email, $tlf);
+            $recover = $this->entrada->dameEntradaPorIdCliente($_SESSION["USER_COD"]);
+            $data['entrada'] = $recover;
         }
 
         $this->view("ventarealizada", $data);
     }
-
 }

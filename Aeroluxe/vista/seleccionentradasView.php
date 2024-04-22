@@ -134,10 +134,10 @@
                 <label for="inputEntryType">Tipo de entrada</label>
                 <select name="tipo_entrada" class="form-control" id="inputEntryType" required>
                     <option value="" disabled selected>Selecciona el tipo de entrada</option>
-                    <option value="unico">Pase único (2500€)</option>
-                    <option value="mensual">Pase mensual (5000€)</option>
-                    <option value="anual">Plan anual (30000€)</option>
-                    <option value="premium">Plan premium (50000€)</option>
+                    <option value="Único">Pase único (2500€)</option>
+                    <option value="Mensual">Pase mensual (5000€)</option>
+                    <option value="Anual">Plan anual (30000€)</option>
+                    <option value="Premium">Plan premium (50000€)</option>
                 </select>
             </div>
 
