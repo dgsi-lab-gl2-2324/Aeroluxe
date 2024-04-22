@@ -59,7 +59,7 @@
           <div class="post-box">
             <div class="post-img"><img src="<?php echo URL ?>/assets/img/piscinaup.png" class="img-fluid" alt=""></div>
             <h3 class="post-title">Compra tu pase</h3>
-            <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Ver más</span><i class="bi bi-arrow-right"></i></a>
+            <a href="<?php echo URL . '/compra'?>" class="readmore stretched-link mt-auto"><span>Ver más</span><i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
 
@@ -509,12 +509,12 @@
                 <li>Piscina principal</li>
                 <li>Aseo premium</li>
                 <li>Transporte aéreo</li>
-                <li class="na">Piscinas segundarias</li>
+                <li class="na">Piscinas secundarias</li>
                 <li class="na">Bufé libre</li>
                 <li class="na">Barra libre</li>
                 <li class="na">Suites</li>
               </ul>
-              <a href="#" class="btn-buy">Comprar</a>
+              <a href="<?php echo URL . '/compra'?>" class="btn-buy">Comprar</a>
             </div>
           </div>
 
@@ -528,12 +528,12 @@
                 <li>Piscina principal</li>
                 <li>Aseo premium</li>
                 <li>Transporte aéreo</li>
-                <li class=>Piscinas segundarias</li>
+                <li class=>Piscinas secundarias</li>
                 <li class="na">Bufé libre</li>
                 <li class="na">Barra libre</li>
                 <li class="na">Suites</li>
               </ul>
-              <a href="#" class="btn-buy">Comprar</a>
+              <a href="<?php echo URL . '/compra'?>" class="btn-buy">Comprar</a>
             </div>
           </div>
 
@@ -546,12 +546,12 @@
                 <li>Piscina principal</li>
                 <li>Aseo premium</li>
                 <li>Transporte aéreo</li>
-                <li class=>Piscinas segundarias</li>
+                <li class=>Piscinas secundarias</li>
                 <li class=>Bufé libre</li>
                 <li class=>Barra libre</li>
                 <li class="na">Suites</li>
               </ul>
-              <a href="#" class="btn-buy">Comprar</a>
+              <a href="<?php echo URL . '/compra'?>" class="btn-buy">Comprar</a>
             </div>
           </div>
 
@@ -564,13 +564,12 @@
                 <li>Piscina principal</li>
                 <li>Aseo premium</li>
                 <li>Transporte aéreo</li>
-                <li class=>Piscinas segundarias</li>
+                <li class=>Piscinas secundarias</li>
                 <li class=>Bufé libre</li>
                 <li class=>Barra libre</li>
                 <li class=>Suites</li>
-
               </ul>
-              <a href="#" class="btn-buy">Comprar</a>
+              <a href="<?php echo URL . '/compra'?>" class="btn-buy">Comprar</a>
             </div>
           </div>
 
@@ -1066,29 +1065,29 @@
               <div class="col-md-6">
                 <div class="info-box">
                   <i class="bi bi-geo-alt"></i>
-                  <h3>Address</h3>
-                  <p>A108 Adam Street,<br>New York, NY 535022</p>
+                  <h3>Dirección</h3>
+                  <p>Pl. de Emilio Alfaro, 8,<br>Zaragoza, Aragón, España</p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info-box">
                   <i class="bi bi-telephone"></i>
-                  <h3>Call Us</h3>
-                  <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
+                  <h3>Llámanos</h3>
+                  <p>925 72 10 10</p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info-box">
                   <i class="bi bi-envelope"></i>
-                  <h3>Email Us</h3>
-                  <p>info@example.com<br>contact@example.com</p>
+                  <h3>Envíanos un mail</h3>
+                  <p>aeroluxesresort@gmail.com</p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info-box">
                   <i class="bi bi-clock"></i>
-                  <h3>Open Hours</h3>
-                  <p>Monday - Friday<br>9:00AM - 05:00PM</p>
+                  <h3>Horario</h3>
+                  <p>Lunes - Domingo<br>00:00 - 00:00</p>
                 </div>
               </div>
             </div>

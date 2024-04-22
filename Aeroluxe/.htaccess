@@ -9,8 +9,13 @@ RewriteRule ^cerrarsesion/?$ index.php?controller=Sesion&action=cerrarSesion [L]
     ##logo
     RewriteRule ^logo/?$ assets/img/logo.png [L]
 
+    ##Perfil
     RewriteRule ^perfil/?$ index.php?controller=Sesion&action=perfil [L]
     RewriteRule ^actualizarperfil/?$ index.php?controller=Sesion&action=actualizarperfil [L]
+
+    ##Compra de entradas
+    RewriteRule ^compra/?$ index.php?controller=Sesion&action=compra [L]
+    RewriteRule ^procesarcompra/?$ index.php?controller=Sesion&action=procesarcompra [L]
 
 #Registro usuario
 RewriteRule ^registro/?$ index.php?controller=Sesion&action=registro [L]
