@@ -48,9 +48,7 @@
         <img src="<?php echo URL ?>/logo" alt="">
         <span>AEROLUXE</span>
       </a>
-
-
-
+      
       <nav id="navbar" class="navbar">
         <ul>
 
@@ -84,8 +82,6 @@
           ?>
 
 
-          <li><a class="nav-link scrollto" href="#services">Servicios</a></li>
-          <li><a class="nav-link scrollto" href="<?php echo URL . '/compra'?>">Compra de entradas</a></li>
           <?php
           if (isset($_SESSION["IS_ADMIN"]) && ($_SESSION["IS_ADMIN"] == true)) {
           ?>
@@ -96,10 +92,7 @@
             <li><a class="nav-link scrollto" href="<?php echo URL . '/perfil' ?>">Mi perfil</a></li>
           <?php
           }
-          ?>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-
-          <?php
+          
           if (isset($_SESSION["USER_NOMBRE"]) && !empty($_SESSION["USER_NOMBRE"])) {
           ?>
 

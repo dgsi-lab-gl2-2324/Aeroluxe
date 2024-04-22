@@ -20,7 +20,7 @@
     <div class="footer-top">
         <div class="container">
             <div class="row gy-4">
-                <div class="col-lg-5 col-md-12 footer-info">
+                <div class="col-lg-4 col-md-12 footer-info">
                     <a href="<?php echo URL . '/inicio'?>" class="logo d-flex align-items-center">
                         <img src="assets/img/logo.png" alt="">
                         <span>AEROLUXE</span>
@@ -55,7 +55,7 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                <div class="col-lg-2 col-md-12 footer-contact text-center text-md-start">
                     <h4>Contact Us</h4>
                     <p>
                         Pl. de Emilio Alfaro, 8 <br>
@@ -65,6 +65,10 @@
                         <strong>Email:</strong> aeroluxesresort@gmail.com<br>
                     </p>
 
+                </div>
+
+                <div class="col-lg-2">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2980.915352456347!2d-0.8974567240478629!3d41.65757087126669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5914b87558f419%3A0x7f82562e59220a69!2sPl.%20de%20Emilio%20Alfaro%2C%208%2C%2050004%20Zaragoza!5e0!3m2!1ses!2ses!4v1713805870449!5m2!1ses!2ses" width="150" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
 
             </div>

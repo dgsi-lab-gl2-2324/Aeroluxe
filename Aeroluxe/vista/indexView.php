@@ -16,7 +16,7 @@
           </div>
         </div>
         <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-          <img src="<?php echo URL ?>/assets/img/piscinascomplejo.png" class="img-fluid" alt="">
+          <img src="<?php echo URL ?>/assets/img/complejoup.png" class="img-fluid" alt="">
         </div>
       </div>
     </div>
@@ -41,7 +41,7 @@
 
           <div class="col-lg-4">
             <div class="post-box">
-              <div class="post-img"><img src="<?php echo URL ?>/assets/img/piscinaup.png" class="img-fluid" alt=""></div>
+              <div class="post-img"><img src="<?php echo URL ?>/assets/img/fotocrearcuentaup.png" class="img-fluid" alt=""></div>
               <h3 class="post-title">Crea tu cuenta</h3>
               <a href="<?php echo URL . '/registro' ?>" class="readmore stretched-link mt-auto"><span>Ver más</span><i class="bi bi-arrow-right"></i></a>
             </div>
@@ -49,15 +49,15 @@
 
           <div class="col-lg-4">
             <div class="post-box">
-              <div class="post-img"><img src="<?php echo URL ?>/assets/img/piscinaup.png" class="img-fluid" alt=""></div>
+              <div class="post-img"><img src="<?php echo URL ?>/assets/img/fotoiniciarsesionup.png" class="img-fluid" alt=""></div>
               <h3 class="post-title">Inicia sesión</h3>
-              <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Ver más</span><i class="bi bi-arrow-right"></i></a>
+              <a href="<?php echo URL . '/iniciarSesion' ?>" class="readmore stretched-link mt-auto"><span>Ver más</span><i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4">
             <div class="post-box">
-              <div class="post-img"><img src="<?php echo URL ?>/assets/img/piscinaup.png" class="img-fluid" alt=""></div>
+              <div class="post-img"><img src="<?php echo URL ?>/assets/img/fotocomprarentradaup.png" class="img-fluid" alt=""></div>
               <h3 class="post-title">Compra tu pase</h3>
               <a href="<?php echo URL . '/compra' ?>" class="readmore stretched-link mt-auto"><span>Ver más</span><i class="bi bi-arrow-right"></i></a>
             </div>
@@ -602,7 +602,7 @@
                   <img src="data:image/jpeg;base64,<?php echo base64_encode($foto->getImagen()) ?>" class="img-fluid" alt="">
                   <div class="portfolio-info">
                     <div class="portfolio-links">
-                      <a href="<?php echo base64_encode($foto->getImagen()) ?>" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i>
+                      <a data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i>
                     
                     </a>
 
@@ -859,6 +859,7 @@
                   <i class="bi bi-geo-alt"></i>
                   <h3>Dirección</h3>
                   <p>Pl. de Emilio Alfaro, 8<br>Zaragoza, Aragón, España</p>
+                  
                 </div>
               </div>
               <div class="col-md-6">

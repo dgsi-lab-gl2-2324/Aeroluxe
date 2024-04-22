@@ -23,13 +23,8 @@ class Admins
      * Admins constructor.
      * @param $id
      * @param $nombre
-     * @param $apellido1
-     * @param $apellido2
      * @param $dni
-     * @param $email
-     * @param $telef
      * @param $clave
-     * @param $fechaalta
      */
     public function __construct($id, $nombre, $dni, string $clave)
     {
