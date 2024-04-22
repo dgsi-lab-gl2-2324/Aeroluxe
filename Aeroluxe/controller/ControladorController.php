@@ -32,6 +32,12 @@ class ControladorController extends ControladorBase
 
         $data['datosCli'] = "";
 
+        $fotos = $this->fotos->dameTodasFotos();
+        $tipos = $this->tipos->dameTipos();
+
+        $data['fotos'] = $fotos;
+        $data['tipos'] = $tipos;
+
 
         $this->view("index", $data);
     }
