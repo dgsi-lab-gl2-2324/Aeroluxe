@@ -569,130 +569,55 @@
           <p>Explora nuestras instalaciones</p>
         </header>
 
+        <?php
+        $tipos = $datos['tipos'];
+        $fotos = $datos['fotos'];
+        ?>
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">Todo</li>
-              <li data-filter=".filter-piscina">Piscinas</li>
-              <li data-filter=".filter-restaurante">Restaurantes</li>
-              <li data-filter=".filter-aseo">Aseos</li>
+              <?php
+              if ($tipos) {
+                foreach ($tipos as $tipo) {
+              ?>
+                  <li data-filter=".filter-<?php echo $tipo->getId(); ?>"><?php echo $tipo->getTipo(); ?></option>
+                <?php
+                }
+              }
+                ?>
             </ul>
           </div>
         </div>
 
+
+
         <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+          <?php
+          if ($fotos) {
+            foreach ($fotos as $foto) {
+          ?>
+              <div class="col-lg-4 col-md-6 portfolio-item filter-<?php echo $foto->getTipo(); ?>">
+                <div class="portfolio-wrap">
+                  <img src="data:image/jpeg;base64,<?php echo base64_encode($foto->getImagen()) ?>" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <div class="portfolio-links">
+                      <a href="<?php echo base64_encode($foto->getImagen()) ?>" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i>
+                    
+                    </a>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-piscina">
-            <div class="portfolio-wrap">
-              <img src="<?php echo URL ?>/assets/img/piscinaup.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Piscina</h4>
-                <div class="portfolio-links">
-                  <a href="<?php echo URL ?>/assets/img/piscinaup.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Piscina"><i class="bi bi-plus"></i></a>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-restaurante">
-            <div class="portfolio-wrap">
-              <img src="<?php echo URL ?>/assets/img/restauranteup.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Restaurante</h4>
-                <div class="portfolio-links">
-                  <a href="<?php echo URL ?>/assets/img/restauranteup.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-aseo">
-            <div class="portfolio-wrap">
-              <img src="<?php echo URL ?>/assets/img/bañoup.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Aseo</h4>
-                <div class="portfolio-links">
-                  <a href="<?php echo URL ?>/assets/img/bañoup.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-piscina">
-            <div class="portfolio-wrap">
-              <img src="<?php echo URL ?>/assets/img/piscinainviernoup.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Piscina</h4>
-                <div class="portfolio-links">
-                  <a href="<?php echo URL ?>/assets/img/piscinainviernoup.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Piscina"><i class="bi bi-plus"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-restaurante">
-            <div class="portfolio-wrap">
-              <img src="<?php echo URL ?>/assets/img/restaurante2up.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Restaurante</h4>
-                <div class="portfolio-links">
-                  <a href="<?php echo URL ?>/assets/img/restaurante2up.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-aseo">
-            <div class="portfolio-wrap">
-              <img src="<?php echo URL ?>/assets/img/baño1up.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Aseo</h4>
-                <div class="portfolio-links">
-                  <a href="<?php echo URL ?>/assets/img/baño1up.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-piscina">
-            <div class="portfolio-wrap">
-              <img src="<?php echo URL ?>/assets/img/piscinaveranoup.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Piscina</h4>
-                <div class="portfolio-links">
-                  <a href="<?php echo URL ?>/assets/img/piscinaveranoup.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Piscina"><i class="bi bi-plus"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-restaurante">
-            <div class="portfolio-wrap">
-              <img src="<?php echo URL ?>/assets/img/restauranteup.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Restaurante</h4>
-                <div class="portfolio-links">
-                  <a href="<?php echo URL ?>/assets/img/restauranteup.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-aseo">
-            <div class="portfolio-wrap">
-              <img src="<?php echo URL ?>/assets/img/bañoup.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Aseo</h4>
-                <div class="portfolio-links">
-                  <a href="<?php echo URL ?>/assets/img/bañoup.png" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
+          <?php
+            }
+          }
+          ?>
         </div>
 
       </div>
+
 
     </section><!-- End Portfolio Section -->
 
