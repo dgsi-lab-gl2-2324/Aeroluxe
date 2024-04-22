@@ -42,6 +42,7 @@ RewriteRule ^admin/?$ index.php?controller=Controlador&action=admin [L]
 
     ##galeria
     RewriteRule ^menuAdminGaleria/?$ index.php?controller=Controlador&action=verGaleria [L]
+
         ###editar galeria
         RewriteRule ^editarGaleria/?$ index.php?controller=Controlador&action=editarGaleria [L]
         ###añadir foto
@@ -53,5 +54,7 @@ RewriteRule ^admin/?$ index.php?controller=Controlador&action=admin [L]
         ###editar tipo de foto
         RewriteRule ^editarTipoFoto/?$ index.php?controller=Controlador&action=editarTipoFoto [L]
 
+    ##mantenimiento
+    RewriteRule ^menuAdminMantenimiento/?$ index.php?controller=Controlador&action=verMantenimiento [L]
 
 

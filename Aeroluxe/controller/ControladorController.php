@@ -127,6 +127,17 @@ class ControladorController extends ControladorBase
         $this->view("admin", $data);
     }
 
+    public function verMantenimiento()
+    {
+        $data = array();
+        $data['mensaje'] = "";
+
+        $opcion = "mantenimiento";
+        $data['opcion'] = $opcion;
+
+        $this->view("admin", $data);
+    }
+
     public function anadirFoto()
     {
 
