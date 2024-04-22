@@ -23,12 +23,13 @@ class AdminModel extends EntidadBase
 
         $sql = "INSERT INTO $this->table "
             . " (nombre,dni,clave)"
-            . " VALUES(:nombre, :dni,:clave)";
+            . " VALUES(:nombre, :dni, :clave)";
         $statement = $this->db->prepare($sql);
 
         $statement->bindParam(':nombre', $nombre, PDO::PARAM_STR);
         $statement->bindParam(':dni', $dni, PDO::PARAM_STR);
         $statement->bindParam(':clave', $clave, PDO::PARAM_STR);
+        
 
         try {
             $save = $statement->execute();
@@ -62,6 +63,32 @@ class AdminModel extends EntidadBase
         }
         return $usu;
     }
+
+    public function dameTodosAdmins()
+    {
+        $admins = array();
+
+        $sql = "SELECT * FROM $this->table;";
+        $statement = $this->db->prepare($sql);
+        $statement->execute();
+
+        if ($statement->rowCount() >=1) {
+
+            $table = $statement->fetchAll();
+
+            foreach ($table as $row) {
+
+                array_push($admins, new Admins(
+                    $row['id'],
+                    $row['nombre'],
+                    $row['dni'],
+                    $row['clave']
+                ));
+            }
+        }
+        return $admins;
+    }
+
 
 
 }

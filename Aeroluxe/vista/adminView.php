@@ -34,6 +34,8 @@
                     require_once 'registroAdminView.php';
                   } else if ($opcion == "clientes") {
                     require_once 'mostrarClientesView.php';
+                  } else if ($opcion == "admins") {
+                    require_once 'mostrarAdminsView.php';
                   } else if ($opcion == "galeria") {
                     require_once 'editarGaleriaView.php';
                   }
@@ -65,6 +67,7 @@
               <ul>
                 <li><a href="<?php echo URL . '/menuAdminAdmin' ?>">Añadir administrador</a></li>
                 <li><a href="<?php echo URL . '/menuAdminClientes' ?>">Clientes</a></li>
+                <li><a href="<?php echo URL . '/menuAdminAdmins' ?>">Administradores</a></li>
                 <li><a href="<?php echo URL . '/menuAdminGaleria' ?>">Galería</a></li>
               </ul>
             </div><!-- End sidebar categories-->

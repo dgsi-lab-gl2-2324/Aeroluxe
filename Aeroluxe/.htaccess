@@ -31,21 +31,27 @@ RewriteRule ^admin/?$ index.php?controller=Controlador&action=admin [L]
     ##registrar admin
     RewriteRule ^menuAdminAdmin/?$ index.php?controller=Controlador&action=registroadmin [L]
 
+    ##añadir nuevo admin
+    RewriteRule ^registraradmin/?$ index.php?controller=Sesion&action=registrarAdmin [L]
+
     ##mostrar clientes
     RewriteRule ^menuAdminClientes/?$ index.php?controller=Controlador&action=mostrarClientes [L]
 
+    ##mostrar admins
+    RewriteRule ^menuAdminAdmins/?$ index.php?controller=Controlador&action=mostrarAdmins [L]
+
     ##galeria
     RewriteRule ^menuAdminGaleria/?$ index.php?controller=Controlador&action=verGaleria [L]
-    ##editar galeria
-    RewriteRule ^editarGaleria/?$ index.php?controller=Controlador&action=editarGaleria [L]
-    ##añadir foto
-    RewriteRule ^anadirFoto4/?$ index.php?controller=Controlador&action=anadirFoto [L]
-    ##mostrar tipo foto
-    RewriteRule ^mostrarTipoFoto/?$ index.php?controller=Controlador&action=mostrarTipoFoto [L]
-    ##añadir tipo de foto
-    RewriteRule ^anadirTipoFoto/?$ index.php?controller=Controlador&action=anadirTipoFoto [L]
-    ##editar tipo de foto
-    RewriteRule ^editarTipoFoto/?$ index.php?controller=Controlador&action=editarTipoFoto [L]
+        ###editar galeria
+        RewriteRule ^editarGaleria/?$ index.php?controller=Controlador&action=editarGaleria [L]
+        ###añadir foto
+        RewriteRule ^anadirFoto4/?$ index.php?controller=Controlador&action=anadirFoto [L]
+        ###mostrar tipo foto
+        RewriteRule ^mostrarTipoFoto/?$ index.php?controller=Controlador&action=mostrarTipoFoto [L]
+        ###añadir tipo de foto
+        RewriteRule ^anadirTipoFoto/?$ index.php?controller=Controlador&action=anadirTipoFoto [L]
+        ###editar tipo de foto
+        RewriteRule ^editarTipoFoto/?$ index.php?controller=Controlador&action=editarTipoFoto [L]
 
 
 

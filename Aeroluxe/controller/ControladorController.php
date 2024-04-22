@@ -9,10 +9,12 @@ class ControladorController extends ControladorBase
      * @var FotosModel
      * @var TiposModel
      * @var ClientesModel
+     * @var AdminModel
      */
     public $fotos;
     public $tipos;
     public $clientes;
+    public $admins;
 
 
     /**
@@ -24,6 +26,7 @@ class ControladorController extends ControladorBase
         $this->fotos = new FotosModel();
         $this->tipos = new TiposModel();
         $this->clientes = new ClientesModel();
+        $this->admins = new AdminModel();
     }
 
     public function index()
@@ -76,6 +79,22 @@ class ControladorController extends ControladorBase
 
         $clientes = $this->clientes->dameTodosClientes();
         $data['clientes'] = $clientes;
+
+        $data['mensaje'] = "";
+
+
+        $this->view("admin", $data);
+    }
+
+    public function mostrarAdmins()
+    {
+        $data = array();
+
+        $opcion = "admins";
+        $data['opcion'] = $opcion;
+
+        $admins = $this->admins->dameTodosAdmins();
+        $data['admins'] = $admins;
 
         $data['mensaje'] = "";
 
