@@ -116,28 +116,6 @@ h6 {
 }
 
 
-table {
-  width: 80%;
-  margin: 20px auto;
-  border-collapse: collapse;
-  text-align: left;
-}
-th, td {
-  padding: 8px;
-  border: 1px solid #ddd; /* Bordes suaves */
-}
-th {
-  background-color: #f2f2f2; /* Color de fondo para los encabezados */
-}
-tr:nth-child(even) {
-  background-color: #f9f9f9; /* Filas alternas con diferente color de fondo */
-}
-tr:hover {
-  background-color: #e8f4f8; /* Color cuando el mouse pasa sobre la fila */
-}
-
-
-
 
 /*--------------------------------------------------------------
 # Sections

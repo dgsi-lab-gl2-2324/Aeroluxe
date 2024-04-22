@@ -263,14 +263,13 @@ class ControladorController extends ControladorBase
         $data['opcion'] = $opcion;
 
         $id = $_POST['id'];
-        $tipo = $_POST['tipo'];
+        $idFoto = $_POST['idFoto'];
 
         $data['mensaje'] = "";
 
-        if (isset($_POST['id']) && isset($_POST['tipo'])) {
+        if (isset($_POST['id']) && isset($_POST['idFoto']) && isset($_POST['tipo'])) {
             $id = $_POST['id'];
-            $tipo = $_POST['tipo'];
-            $tipos = $this->fotos->editarTipo($id, $tipo);
+            $tipos = $this->fotos->editarTipo($id, $idFoto);
             $data['mensaje'] = $tipos ? "Tipo editado correctamente" : "Error al editar el tipo";
         } else {
             $data['mensaje'] = "Error: Datos incompletos.";

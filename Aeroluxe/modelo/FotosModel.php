@@ -65,27 +65,27 @@ class FotosModel extends EntidadBase
         return $fotos;
     }
 
-    public function editarTipo()
+    public function editarTipo($id, $idFoto)
     {
-        $tipos = array();
+        $inserto = false;
+echo $id;
 
-        $sql = "UPDATE TABLE $this->table;";
+echo $idFoto;
+
+        $sql = "UPDATE $this->table SET tipo = :id WHERE id = :idFoto";
         $statement = $this->db->prepare($sql);
-        $statement->execute();
 
-        if ($statement->rowCount() >= 1) {
+        $statement->bindParam(':id', $id, PDO::PARAM_INT);
+        $statement->bindParam(':idFoto', $idFoto, PDO::PARAM_INT);
 
-            $table = $statement->fetchAll();
-
-            foreach ($table as $row) {
-
-                array_push($tipos, new Tipos(
-                    $row['id'],
-                    $row['tipo']
-                ));
-            }
+        try {
+            $save = $statement->execute();
+            $inserto = true;
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+            $inserto = false;
         }
-        return $tipos;
+        return $inserto;
     }
 
     public function borrarFoto($id)

@@ -19,7 +19,6 @@
                     <input type="hidden" name="mensaje" value="<?php echo $mensaje; ?>">
                 </form>
             <?php
-                # echo "<script>window.location='" . URL . "/menuAdminGaleria';</script>";
             }
 
             ?>
@@ -59,10 +58,10 @@
                         </td>
                         <td>
                             <!-- Botones de Guardar y Cancelar, inicialmente ocultos -->
-                            <button id="saveButton" class="btn btn-success" style="display:none">Guardar</button>
+                            <button id="saveButton" class="btn btn-primary" style="display:none">Guardar</button>
                         </td>
                         <td>
-                            <button id="cancelButton" class="btn btn-danger" style="display:none">Cancelar</button>
+                            <button id="cancelButton" class="btn btn-primary" style="display:none">Cancelar</button>
                         </td>
                     </tr>
                 </table>
@@ -156,15 +155,28 @@
                                     <form method="post" action="<?php echo URL . '/editarTipoFoto'; ?>">
                                         <div class="form-group">
                                             <label for="photoTypeInput">Tipo de foto:</label>
-                                            <input type="text" class="form-control" id="photoTypeInput" name="tipofoto">
-                                            <input type="hidden" id="photoIdInput" name="fotoid">
+                                            <select class="form-control" name="id" required id="photoType">
+                                                <option value="">Selecciona un tipo</option>
+                                                <?php
+                                                if ($tipos) {
+                                                    foreach ($tipos as $tipo) {
+                                                ?>
+                                                    <option value="<?php echo $tipo->getId() ?>"><?php echo $tipo->getTipo(); ?></option>
+                                                <?php
+                                                    }
+                                                }
+                                                ?>
+                                            </select>
+                                            <input type="hidden" id="photoIdInput" name="idFoto" value=<?php echo $foto->getId() ?>>
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            <button type="submit" class="btn btn-primary">Guardar</button>
                                         </div>
                                     </form>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                    <button type="submit" class="btn btn-primary">Guardar</button>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -216,8 +228,8 @@
 </script>
 
 <script>
-        // Script para enviar el formulario automáticamente cuando la página carga
-        window.onload = function() {
-            document.getElementById('autoSubmitForm').submit();
-        };
-    </script>
+    // Script para enviar el formulario automáticamente cuando la página carga
+    window.onload = function() {
+        document.getElementById('autoSubmitForm').submit();
+    };
+</script>
