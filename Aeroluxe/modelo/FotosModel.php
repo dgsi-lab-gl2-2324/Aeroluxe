@@ -68,7 +68,9 @@ class FotosModel extends EntidadBase
     public function editarTipo($idTipo, $idFoto)
     {
         $inserto = false;
-
+        echo "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+        echo $idTipo;
+        echo $idFoto;
         $sql = "UPDATE $this->table SET tipo = :idTipo WHERE id = :idFoto";
         $statement = $this->db->prepare($sql);
 
