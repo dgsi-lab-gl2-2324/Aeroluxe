@@ -113,11 +113,13 @@ class SesionController extends ControladorBase
     {
         $data = array();
 
+        $opcion = "";
+        $mensaje = "";
 
-        $cargarvista = "index";
+        $cargarvista = "admin";
 
         if (isset($_SESSION["USER_NOMBRE"]) && !empty($_SESSION["USER_NOMBRE"])) {
-        } else {
+
             if (
                 isset($_POST['nombre']) &&
                 isset($_POST['dni']) &&
@@ -135,30 +137,26 @@ class SesionController extends ControladorBase
 
                     $inserto = $this->admin->insertarAdmin($nombre, $dni, $clave);
 
-                    if ($inserto) {
-
-                        $datosAd = $this->admin->dameAdminPorDni($dni);
-                        $data['datosAd'] = $datosAd;
-
-                        $_SESSION["USER_NOMBRE"] = $nombre;
-                        $_SESSION["USER_COD"] = $datosAd->getId();
-                        $_SESSION["IS_ADMIN"] = true;
-
-                        $cargarvista = 'index';
-                    } else {
+                    if (!$inserto) {
                         $mens = "Usuario ya existente";
                         $mensaje = '<div class="alert alert-warning text-center" role="alert">' . $mens . '</div>';
                         $data['mensaje'] = $mensaje;
-                        $cargarvista = 'registro';
+                        $cargarvista = 'admin';
+                        $opcion = "admin";
                     }
                 } else {
                     $mens = "Claves no coinciden";
                     $mensaje = '<div class="alert alert-warning text-center" role="alert">' . $mens . '</div>';
                     $data['mensaje'] = $mensaje;
-                    $cargarvista = 'registro';
+                    $cargarvista = 'admin';
+                    $opcion = "admin";
                 }
             }
         }
+
+        $data['opcion'] = $opcion;
+        $data['mensaje'] = $mensaje;
+
         $this->view($cargarvista, $data);
     }
 

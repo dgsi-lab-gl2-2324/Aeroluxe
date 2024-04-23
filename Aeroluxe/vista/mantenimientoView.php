@@ -7,7 +7,7 @@
                 <h1 class="text-primary text-center">MANTENIMIENTO</h1>
 
             </div>
-            <table>
+            <table class="table table-striped table-hover">
     <thead>
         <tr>
             <th>Nombre Trabajador</th>

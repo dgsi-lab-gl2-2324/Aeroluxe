@@ -19,7 +19,6 @@
                     <input type="hidden" name="mensaje" value="<?php echo $mensaje; ?>">
                 </form>
             <?php
-                # echo "<script>window.location='" . URL . "/menuAdminGaleria';</script>";
             }
 
             ?>
@@ -35,7 +34,7 @@
                             <div id="imagePreview"></div>
                         </td>
                         <td>
-                            <!-- Sección de tipo de foto, inicialmente oculta -->
+                            <!-- Sección de tipo de foto -->
                             <div id="photoTypeSection" class="form-group" style="display:none">
                                 <label for="photoType">Tipo de Foto:</label>
                                 <select class="form-control" name="photoType" required id="photoType">
@@ -58,11 +57,11 @@
                             </div>
                         </td>
                         <td>
-                            <!-- Botones de Guardar y Cancelar, inicialmente ocultos -->
-                            <button id="saveButton" class="btn btn-success" style="display:none">Guardar</button>
+                            <!-- Botones de Guardar y Cancelar -->
+                            <button id="saveButton" type="submit" class="btn btn-primary" style="display:none">Guardar</button>
                         </td>
                         <td>
-                            <button id="cancelButton" class="btn btn-danger" style="display:none">Cancelar</button>
+                            <button id="cancelButton" type="reset" class="btn btn-primary" style="display:none">Cancelar</button>
                         </td>
                     </tr>
                 </table>
@@ -133,6 +132,7 @@
                                             <div class="portfolio-links">
                                                 <!-- Enlace para abrir el modal de edición -->
                                                 <a href="#editPhotoModal" data-bs-toggle="modal" class="edit-btn" title="Editar imagen" data-id="<?php echo $foto->getId(); ?>" data-tipo="<?php echo $foto->getTipo(); ?>"><i class="bi bi-pencil"></i></a>
+                                                <a href="#deletePhotoModal" data-bs-toggle="modal" class="delete-btn" title="Borrar imagen" data-id="<?php echo $foto->getId(); ?>" data-tipo="<?php echo $foto->getTipo(); ?>"><i class="bi bi-trash"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -156,18 +156,69 @@
                                     <form method="post" action="<?php echo URL . '/editarTipoFoto'; ?>">
                                         <div class="form-group">
                                             <label for="photoTypeInput">Tipo de foto:</label>
-                                            <input type="text" class="form-control" id="photoTypeInput" name="tipofoto">
-                                            <input type="hidden" id="photoIdInput" name="fotoid">
+                                            <select class="form-control" name="idTipo" required id="photoType">
+                                                <option value="">Selecciona un tipo</option>
+                                                <?php
+                                                if ($tipos) {
+                                                    foreach ($tipos as $tipo) {
+                                                ?>
+                                                        <option value="<?php echo $tipo->getId() ?>"><?php echo $tipo->getTipo(); ?></option>
+                                                <?php
+                                                    }
+                                                }
+                                                ?>
+                                            </select>
+
+                                            <input type="hidden" id="photoIdInput" name="idFoto" value=<?php echo $foto->getId() ?>>
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            <button type="submit" class="btn btn-primary">Guardar</button>
                                         </div>
                                     </form>
                                 </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal de borrado -->
+                    <div class="modal fade" id="deletePhotoModal" tabindex="-1" aria-labelledby="deletePhotoModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="deletePhotoModalLabel">Eliminar Foto</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    ¿Estás seguro de que quieres eliminar esta foto?
+                                </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                    <button type="submit" class="btn btn-primary">Guardar</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    <form method="post" action="<?php echo URL . '/eliminarFoto'; ?>" style="display:inline;">
+                                        <input type="hidden" id="deletePhotoIdInput" name="id">
+                                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+
+                    <script>
+                        $(document).ready(function() {
+                            $('#editPhotoModal').on('show.bs.modal', function(event) {
+                                var button = $(event.relatedTarget); // Enlace que activó el modal
+                                var fotoId = button.attr('data-id'); // Extraer información del atributo data-id
+                                var fotoTipo = button.attr('data-tipo'); // Extraer información del atributo data-tipo
+
+                                var modal = $(this);
+                                modal.find('#photoIdInput').val(fotoId); // Actualizar el valor del input oculto con el ID de la foto
+                                modal.find('#photoType').val(fotoTipo); // Opcionalmente, seleccionar el tipo correcto en el dropdown si es necesario
+                            });
+                        });
+                    </script>
 
                     <script>
                         // Asegúrate de que este script se ejecute después de que la página se haya cargado completamente
@@ -180,13 +231,25 @@
                                     var fotoId = this.getAttribute('data-id');
                                     var fotoTipo = this.getAttribute('data-tipo');
 
-                                    document.getElementById('photoTypeInput').value = fotoTipo;
+                                    document.getElementById('photoType').value = fotoTipo;
                                     document.getElementById('photoIdInput').value = fotoId;
                                 });
                             });
                         });
                     </script>
 
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            // Añadir evento click a cada botón de borrado
+                            var deleteButtons = document.querySelectorAll('.delete-btn');
+                            deleteButtons.forEach(function(btn) {
+                                btn.addEventListener('click', function() {
+                                    var fotoId = this.getAttribute('data-id');
+                                    document.getElementById('deletePhotoIdInput').value = fotoId;
+                                });
+                            });
+                        });
+                    </script>
 
 
                 </div>
@@ -216,8 +279,8 @@
 </script>
 
 <script>
-        // Script para enviar el formulario automáticamente cuando la página carga
-        window.onload = function() {
-            document.getElementById('autoSubmitForm').submit();
-        };
-    </script>
+    // Script para enviar el formulario automáticamente cuando la página carga
+    window.onload = function() {
+        document.getElementById('autoSubmitForm').submit();
+    };
+</script>

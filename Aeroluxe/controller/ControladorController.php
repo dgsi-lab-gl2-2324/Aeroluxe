@@ -211,7 +211,7 @@ class ControladorController extends ControladorBase
         $this->view("admin", $data);
     }
 
-    public function borrarFoto()
+    public function eliminarFoto()
     {
         $data = array();
 
@@ -224,11 +224,18 @@ class ControladorController extends ControladorBase
 
         if (isset($_POST['id'])) {
             $id = $_POST['id'];
-            $tipos = $this->fotos->borrarFoto($id);
-            $data['mensaje'] = $tipos ? "Foto borrada correctamente" : "Error al borrar la foto";
+echo "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            echo $id;
+            $fotos = $this->fotos->borrarFoto($id);
+            $data['mensaje'] = $fotos ? "Foto borrada correctamente" : "Error al borrar la foto";
         } else {
             $data['mensaje'] = "Error: Datos incompletos.";
         }
+        
+        $fotos = $this->fotos->dameTodasFotos();
+
+        $data['fotos'] = $fotos;
+        $data['redirige'] = "true";
 
         $this->view("admin", $data);
     }
@@ -262,19 +269,25 @@ class ControladorController extends ControladorBase
         $opcion = "galeria";
         $data['opcion'] = $opcion;
 
-        $id = $_POST['id'];
-        $tipo = $_POST['tipo'];
+        $idTipo = $_POST['idTipo'];
+        $idFoto = $_POST['idFoto'];
 
         $data['mensaje'] = "";
 
-        if (isset($_POST['id']) && isset($_POST['tipo'])) {
-            $id = $_POST['id'];
-            $tipo = $_POST['tipo'];
-            $tipos = $this->fotos->editarTipo($id, $tipo);
+        if (isset($_POST['idTipo']) && isset($_POST['idFoto'])) {
+            $tipos = $this->fotos->editarTipo($idTipo, $idFoto);
             $data['mensaje'] = $tipos ? "Tipo editado correctamente" : "Error al editar el tipo";
         } else {
             $data['mensaje'] = "Error: Datos incompletos.";
         }
+
+        $fotos = $this->fotos->dameTodasFotos();
+        $tipos = $this->tipos->dameTipos();
+
+
+        $data['fotos'] = $fotos;
+        $data['tipos'] = $tipos;
+        $data['redirige'] = "true";
 
         $this->view("admin", $data);
     }

@@ -65,28 +65,32 @@ class FotosModel extends EntidadBase
         return $fotos;
     }
 
-    public function editarTipo()
+    public function editarTipo($idTipo, $idFoto)
     {
-        $tipos = array();
-
-        $sql = "UPDATE TABLE $this->table;";
+        $inserto = false;
+        echo "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+        echo $idTipo;
+        echo $idFoto;
+        $sql = "UPDATE $this->table SET tipo = :idTipo WHERE id = :idFoto";
         $statement = $this->db->prepare($sql);
-        $statement->execute();
 
-        if ($statement->rowCount() >= 1) {
+        $statement->bindParam(':idTipo', $idTipo, PDO::PARAM_INT);
+        $statement->bindParam(':idFoto', $idFoto, PDO::PARAM_INT);
 
-            $table = $statement->fetchAll();
-
-            foreach ($table as $row) {
-
-                array_push($tipos, new Tipos(
-                    $row['id'],
-                    $row['tipo']
-                ));
+        try {
+            $save = $statement->execute();
+            if ($save) {
+                $inserto = true;
+            } else {
+                print_r($statement->errorInfo());
             }
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+            $inserto = false;
         }
-        return $tipos;
+        return $inserto;
     }
+
 
     public function borrarFoto($id)
     {
@@ -104,7 +108,4 @@ class FotosModel extends EntidadBase
         }
         return $borrado;
     }
-
-
-    
 }
