@@ -34,7 +34,7 @@
                             <div id="imagePreview"></div>
                         </td>
                         <td>
-                            <!-- Sección de tipo de foto, inicialmente oculta -->
+                            <!-- Sección de tipo de foto -->
                             <div id="photoTypeSection" class="form-group" style="display:none">
                                 <label for="photoType">Tipo de Foto:</label>
                                 <select class="form-control" name="photoType" required id="photoType">
@@ -57,11 +57,11 @@
                             </div>
                         </td>
                         <td>
-                            <!-- Botones de Guardar y Cancelar, inicialmente ocultos -->
-                            <button id="saveButton" class="btn btn-primary" style="display:none">Guardar</button>
+                            <!-- Botones de Guardar y Cancelar -->
+                            <button id="saveButton" type="submit" class="btn btn-primary" style="display:none">Guardar</button>
                         </td>
                         <td>
-                            <button id="cancelButton" class="btn btn-primary" style="display:none">Cancelar</button>
+                            <button id="cancelButton" type="reset" class="btn btn-primary" style="display:none">Cancelar</button>
                         </td>
                     </tr>
                 </table>
@@ -132,6 +132,7 @@
                                             <div class="portfolio-links">
                                                 <!-- Enlace para abrir el modal de edición -->
                                                 <a href="#editPhotoModal" data-bs-toggle="modal" class="edit-btn" title="Editar imagen" data-id="<?php echo $foto->getId(); ?>" data-tipo="<?php echo $foto->getTipo(); ?>"><i class="bi bi-pencil"></i></a>
+                                                <a href="#deletePhotoModal" data-bs-toggle="modal" class="delete-btn" title="Borrar imagen" data-id="<?php echo $foto->getId(); ?>" data-tipo="<?php echo $foto->getTipo(); ?>"><i class="bi bi-trash"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -155,7 +156,7 @@
                                     <form method="post" action="<?php echo URL . '/editarTipoFoto'; ?>">
                                         <div class="form-group">
                                             <label for="photoTypeInput">Tipo de foto:</label>
-                                            <select class="form-control" name="id" required id="photoType">
+                                            <select class="form-control" name="idTipo" required id="photoType">
                                                 <option value="">Selecciona un tipo</option>
                                                 <?php
                                                 if ($tipos) {
@@ -171,8 +172,35 @@
                                         </div>
 
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                             <button type="submit" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal de borrado -->
+                    <div class="modal fade" id="deletePhotoModal" tabindex="-1" aria-labelledby="editPhotoModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="deletePhotoModalLabel">Eliminar foto</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form method="post" action="<?php echo URL . '/eliminarFoto'; ?>">
+                                        <div class="form-group">
+                                            <label for="photoTypeInput">¿Desea eliminar la foto?</label>
+                                            
+                                            <input type="hidden" name="id" value=<?php echo $foto->getId() ?>>
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                            <button type="submit" class="btn btn-primary">Aceptar</button>
                                         </div>
                                     </form>
                                 </div>

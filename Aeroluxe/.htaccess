@@ -47,6 +47,8 @@ RewriteRule ^admin/?$ index.php?controller=Controlador&action=admin [L]
         RewriteRule ^editarGaleria/?$ index.php?controller=Controlador&action=editarGaleria [L]
         ###añadir foto
         RewriteRule ^anadirFoto4/?$ index.php?controller=Controlador&action=anadirFoto [L]
+        ###eliminar foto
+        RewriteRule ^eliminarFoto/?$ index.php?controller=Controlador&action=eliminarFoto [L]
         ###mostrar tipo foto
         RewriteRule ^mostrarTipoFoto/?$ index.php?controller=Controlador&action=mostrarTipoFoto [L]
         ###añadir tipo de foto

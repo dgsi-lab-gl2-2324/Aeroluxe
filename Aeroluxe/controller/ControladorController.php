@@ -211,7 +211,7 @@ class ControladorController extends ControladorBase
         $this->view("admin", $data);
     }
 
-    public function borrarFoto()
+    public function eliminarFoto()
     {
         $data = array();
 
@@ -229,6 +229,9 @@ class ControladorController extends ControladorBase
         } else {
             $data['mensaje'] = "Error: Datos incompletos.";
         }
+
+        $data['tipos'] = $tipos;
+        $data['redirige'] = "true";
 
         $this->view("admin", $data);
     }
@@ -262,18 +265,24 @@ class ControladorController extends ControladorBase
         $opcion = "galeria";
         $data['opcion'] = $opcion;
 
-        $id = $_POST['id'];
+        $idTipo = $_POST['idTipo'];
         $idFoto = $_POST['idFoto'];
 
         $data['mensaje'] = "";
 
-        if (isset($_POST['id']) && isset($_POST['idFoto']) && isset($_POST['tipo'])) {
-            $id = $_POST['id'];
-            $tipos = $this->fotos->editarTipo($id, $idFoto);
+        $fotos = $this->fotos->dameTodasFotos();
+        $tipos = $this->tipos->dameTipos();
+
+        if (isset($_POST['idTipo']) && isset($_POST['idFoto'])) {
+            $tipos = $this->fotos->editarTipo($idTipo, $idFoto);
             $data['mensaje'] = $tipos ? "Tipo editado correctamente" : "Error al editar el tipo";
         } else {
             $data['mensaje'] = "Error: Datos incompletos.";
         }
+
+        $data['fotos'] = $fotos;
+        $data['tipos'] = $tipos;
+        $data['redirige'] = "true";
 
         $this->view("admin", $data);
     }
