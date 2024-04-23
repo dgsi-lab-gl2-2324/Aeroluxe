@@ -1,0 +1,62 @@
+RewriteEngine On
+
+#URL AMIGABLE
+
+#cabecera
+RewriteRule ^inicio/?$ index.php [L]
+RewriteRule ^cerrarsesion/?$ index.php?controller=Sesion&action=cerrarSesion [L]
+
+    ##logo
+    RewriteRule ^logo/?$ assets/img/logo.png [L]
+
+    ##Perfil
+    RewriteRule ^perfil/?$ index.php?controller=Sesion&action=perfil [L]
+    RewriteRule ^actualizarperfil/?$ index.php?controller=Sesion&action=actualizarperfil [L]
+
+    ##Compra de entradas
+    RewriteRule ^compra/?$ index.php?controller=Sesion&action=compra [L]
+    RewriteRule ^procesarcompra/?$ index.php?controller=Sesion&action=procesarcompra [L]
+
+#Registro usuario
+RewriteRule ^registro/?$ index.php?controller=Sesion&action=registro [L]
+    ##registrar
+    RewriteRule ^registrarse/?$ index.php?controller=Sesion&action=registrarse [L]
+
+#Login usuario 
+RewriteRule ^iniciarSesion/?$ index.php?controller=Sesion&action=iniciar [L]
+RewriteRule ^iniciasesion/?$ index.php?controller=Sesion&action=iniciaSesion [L]
+
+#Usuario admin
+RewriteRule ^admin/?$ index.php?controller=Controlador&action=admin [L]
+    ##registrar admin
+    RewriteRule ^menuAdminAdmin/?$ index.php?controller=Controlador&action=registroadmin [L]
+
+    ##añadir nuevo admin
+    RewriteRule ^registraradmin/?$ index.php?controller=Sesion&action=registrarAdmin [L]
+
+    ##mostrar clientes
+    RewriteRule ^menuAdminClientes/?$ index.php?controller=Controlador&action=mostrarClientes [L]
+
+    ##mostrar admins
+    RewriteRule ^menuAdminAdmins/?$ index.php?controller=Controlador&action=mostrarAdmins [L]
+
+    ##galeria
+    RewriteRule ^menuAdminGaleria/?$ index.php?controller=Controlador&action=verGaleria [L]
+
+        ###editar galeria
+        RewriteRule ^editarGaleria/?$ index.php?controller=Controlador&action=editarGaleria [L]
+        ###añadir foto
+        RewriteRule ^anadirFoto4/?$ index.php?controller=Controlador&action=anadirFoto [L]
+        ###eliminar foto
+        RewriteRule ^eliminarFoto/?$ index.php?controller=Controlador&action=eliminarFoto [L]
+        ###mostrar tipo foto
+        RewriteRule ^mostrarTipoFoto/?$ index.php?controller=Controlador&action=mostrarTipoFoto [L]
+        ###añadir tipo de foto
+        RewriteRule ^anadirTipoFoto/?$ index.php?controller=Controlador&action=anadirTipoFoto [L]
+        ###editar tipo de foto
+        RewriteRule ^editarTipoFoto/?$ index.php?controller=Controlador&action=editarTipoFoto [L]
+
+    ##mantenimiento
+    RewriteRule ^menuAdminMantenimiento/?$ index.php?controller=Controlador&action=verMantenimiento [L]
+
+
