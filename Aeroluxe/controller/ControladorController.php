@@ -224,8 +224,6 @@ class ControladorController extends ControladorBase
 
         if (isset($_POST['id'])) {
             $id = $_POST['id'];
-echo "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
-            echo $id;
             $fotos = $this->fotos->borrarFoto($id);
             $data['mensaje'] = $fotos ? "Foto borrada correctamente" : "Error al borrar la foto";
         } else {
