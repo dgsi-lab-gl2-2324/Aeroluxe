@@ -21,7 +21,7 @@
         <div class="container">
             <div class="row gy-4">
                 <div class="col-lg-4 col-md-12 footer-info">
-                    <a href="<?php echo URL . '/inicio'?>" class="logo d-flex align-items-center">
+                    <a href="<?php echo URL . '/inicio' ?>" class="logo d-flex align-items-center">
                         <img src="assets/img/logo.png" alt="">
                         <span>AEROLUXE</span>
                     </a>
@@ -68,7 +68,7 @@
                 </div>
 
                 <div class="col-lg-2">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2980.915352456347!2d-0.8974567240478629!3d41.65757087126669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5914b87558f419%3A0x7f82562e59220a69!2sPl.%20de%20Emilio%20Alfaro%2C%208%2C%2050004%20Zaragoza!5e0!3m2!1ses!2ses!4v1713805870449!5m2!1ses!2ses" width="150" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2980.915352456347!2d-0.8974567240478629!3d41.65757087126669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5914b87558f419%3A0x7f82562e59220a69!2sPl.%20de%20Emilio%20Alfaro%2C%208%2C%2050004%20Zaragoza!5e0!3m2!1ses!2ses!4v1713805870449!5m2!1ses!2ses" width="150" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
 
             </div>
@@ -77,12 +77,26 @@
 
     <div class="container">
         <div class="copyright">
-            &copy; Copyright <strong><span>Aeroluxe</span></strong>. All Rights Reserved
+            <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+                <span property="dct:title">Aeroluxe Resort</span> © 2024 by <span property="cc:attributionName">Aeroluxe</span> is licensed under
+                <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-ND 4.0
+                    <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
+                    <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
+                    <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
+                    <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt="">
+                </a>
+            </p>
         </div>
         <div class="credits">
-            Designed by <a href="<?php echo URL . '/inicio'?>" >Aeroluxe</a>
+            Designed by <a href="<?php echo URL . '/inicio' ?>">Aeroluxe</a>
         </div>
     </div>
+
+
+
+
+
+
 </footer><!-- End Footer -->
 
 
